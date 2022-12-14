@@ -1,0 +1,13 @@
+.my-card {
+  min-width: 300px;
+  max-width: 300px;
+  height: auto;
+  background-color: black;
+  margin: 10px;
+  color: white;
+}
+
+.my-card img {
+  max-width: 300px;
+  min-width: 300px;
+}
