@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    gap:20px;
+    /* border: 1px solid red; */
+    margin-top: 100px;
+    margin-left:100px;
+    margin-right: 100px;
+    color:rgb(70, 64, 64);
+}
+.large-img>img{
+    width: 500px;
+    height: 550px;
+    /* border:1px solid black; */
+}
+.small-img{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap:15px
+
+}
+.small-img>img{
+    width:140px;
+    height: 200px;
+}
+.details{
+    /* border:1px solid red; */
+    /* width:600px; */
+    margin-top: 0px;
+}
+.details>h2{
+    color:rgb(70, 64, 64);
+}
+.like{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.like>img{
+    display: flex;
+  
+    width: 140px;
+    height: 200px;
+}
+.color-div{
+    margin-top: 10px;
+}
+.color-div>img{
+    /* border:1px solid black; */
+    border-radius: 50%;
+    margin: 1px;
+    padding: 1px;
+    width:40px;
+    /* margin-top:10px; */
+}
+.color-div>p{
+    margin-bottom: 10px;
+}
+.size{
+    display: flex;
+    gap:3px;
+    
+
+}
+.size>div{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width:50px;
+    height:50Px;
+    background-color: #f7f6f2;
+}
+.size>div:hover{
+    border: 1px solid blue;
+}
+.size-star{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+select{
+    width: 100px;
+    padding:10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.button-div>button{
+    width: 100%;
+    padding:20Px 30%;
+    background-color:  #4b5666;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 50px;
+}
+.addto{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-decoration: underline;
+    text-decoration-color:rgb(42, 154, 148);
+}
