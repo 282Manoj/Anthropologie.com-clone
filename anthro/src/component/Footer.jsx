@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import { SlLocationPin } from "react-icons/sl";
 import { CiMail } from "react-icons/ci";
 
 function Footer() {
+  const [inputChange, setInputChange] = useState("");
+
   return (
     <>
       <div className="footer">
@@ -21,7 +23,11 @@ function Footer() {
             <div className="lable">Email Address*</div>
             <div className="input-btn-field">
               <div className="input-field">
-                <input type="text" />
+                <input
+                  type="email"
+                  onChange={(e) => setInputChange(e.target.value)}
+                  value={inputChange}
+                />
               </div>
 
               <div className="input-btn">

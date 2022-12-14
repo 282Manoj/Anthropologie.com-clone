@@ -57,6 +57,12 @@
   height: 100%;
   width: 100%;
   border: none;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.input-field input:focus {
+  outline: none;
 }
 
 .input-btn {
@@ -134,8 +140,8 @@
   text-decoration: underline;
 }
 
-.lower-footers p:nth-child(1):hover{
-    text-decoration: none;
+.lower-footers p:nth-child(1):hover {
+  text-decoration: none;
 }
 
 .lower-footers .store-location {

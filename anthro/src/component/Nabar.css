@@ -151,6 +151,6 @@
 
 .color-teal:hover {
   color: teal;
-  margin-bottom: 10px;
+  transition: 0.1s ease-out;
   border-bottom: 1px solid teal;
 }
