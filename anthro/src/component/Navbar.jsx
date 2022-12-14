@@ -4,7 +4,6 @@ import { SlGlobeAlt } from "react-icons/sl";
 import { CiUser } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 
 function Navbar() {
   const [inputTab, setInputTab] = useState("");
@@ -69,31 +68,25 @@ function Navbar() {
             </div>
           </div>
         </div>
+
+        <div className="below-navbar">
+          <ul>
+            <l1 className="color-red">Gifts</l1>
+            <l1 className="color-teal">New!</l1>
+            <l1 className="color-teal">Dresses</l1>
+            <l1 className="color-teal">Clothing</l1>
+            <l1 className="color-teal">Shoes</l1>
+            <l1 className="color-teal">Accessories</l1>
+            <l1 className="color-teal">BHLDN Wedding</l1>
+            <l1 className="color-teal">Home & Furniture </l1>
+            <l1 className="color-teal">Beauty & Wellness</l1>
+            <l1 className="color-teal">Garden & Outdoor</l1>
+            <l1 className="color-teal">Sale</l1>
+          </ul>
+        </div>
       </div>
 
       {/* Below Navbar */}
-      <div className="below-navbar">
-        <ul>
-          <l1 className="color-red">Gifts</l1>
-          <l1 className="color-teal">New!</l1>
-          <l1 className="color-teal">Dresses</l1>
-          <l1 className="color-teal">Clothing</l1>
-          <l1 className="color-teal">Shoes</l1>
-          <l1 className="color-teal">Accessories</l1>
-          <l1 className="color-teal">BHLDN Wedding</l1>
-          <l1 className="color-teal">Home & Furniture </l1>
-          <l1 className="color-teal">Beauty & Wellness</l1>
-          <l1 className="color-teal">Garden & Outdoor</l1>
-          <l1 className="color-teal">Sale</l1>
-        </ul>
-      </div>
-
-      <div className="banner-navbar">
-        <img
-          src="https://images.ctfassets.net/5de70he6op10/g4Rao5dp4XYh9mHJ31Mku/d4fa659fb2753c2aba8ff20538ba126f/121322_Upto50Off_SelectGifting_HPGSecondaryBanner_LS.jpg?w=2882&q=80&fm=webp"
-          alt=""
-        />
-      </div>
     </>
   );
 }
