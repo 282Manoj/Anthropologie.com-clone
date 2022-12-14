@@ -1,6 +1,11 @@
 .nav{
     position:absolute;
 }
+.footer{
+    /* margin-top: 400px; */
+    position: relative;
+    top:300px;
+}
 .container{
     display: flex;
     gap:20px;
