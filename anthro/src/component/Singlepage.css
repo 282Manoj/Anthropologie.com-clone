@@ -1,8 +1,13 @@
+.nav{
+    position:absolute;
+}
 .container{
     display: flex;
     gap:20px;
+    position: relative;
+    top:180px;
     /* border: 1px solid red; */
-    margin-top: 100px;
+    margin-top: 25px;
     margin-left:100px;
     margin-right: 100px;
     color:rgb(70, 64, 64);

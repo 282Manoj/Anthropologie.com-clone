@@ -1,8 +1,14 @@
 import React from 'react'
 import { BsAlignBottom, BsTypeUnderline } from 'react-icons/bs';
 import "./Singlepage.css";
+import Navbar from "./Navbar";
 const Singlepage = () => {
   return (
+    <>
+    <div className='nav'>
+
+    <Navbar/>
+    </div>
     <div className='container'>
       <div className='small-img'>
         <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
@@ -64,6 +70,7 @@ const Singlepage = () => {
         <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
       </div>
     </div>
+    </>
   )
 }
 
