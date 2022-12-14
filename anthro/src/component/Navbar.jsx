@@ -4,6 +4,7 @@ import { SlGlobeAlt } from "react-icons/sl";
 import { CiUser } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [inputTab, setInputTab] = useState("");
@@ -74,7 +75,9 @@ function Navbar() {
             <l1 className="color-red">Gifts</l1>
             <l1 className="color-teal">New!</l1>
             <l1 className="color-teal">Dresses</l1>
+            <Link to="/clothe">
             <l1 className="color-teal">Clothing</l1>
+            </Link>
             <l1 className="color-teal">Shoes</l1>
             <l1 className="color-teal">Accessories</l1>
             <l1 className="color-teal">BHLDN Wedding</l1>
