@@ -1,0 +1,136 @@
+.homepage {
+  position: relative;
+  height: 100vh;
+  top: 200px;
+  /* border: 1px solid red; */
+}
+
+.banner-homepage {
+  height: auto;
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.banner-homepage img {
+  height: 100px;
+  width: 100%;
+}
+
+.shop-by-pics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 95%;
+  height: auto;
+  margin: auto;
+  gap: 20px;
+  column-gap: 40px;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+}
+
+.shop-by-pics > div {
+  height: 600px;
+  cursor: pointer;
+}
+
+.shop-by-pics > div > img {
+  height: 600px;
+  width: 100%;
+}
+
+.big-banner {
+  height: 650px;
+  width: 95%;
+  margin: auto;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.big-banner .image-homepage img {
+  height: 650px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.image-homepage {
+  position: absolute;
+  width: 100%;
+}
+
+.button-homepage {
+  display: flex;
+  position: relative;
+  width: 25%;
+  margin: auto;
+  left: 40px;
+  top: 580px;
+}
+
+.button-homepage button {
+  width: 100%;
+  height: 45px;
+  background-color: #fdfdf9;
+  border: none;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.button-homepage button:hover {
+  text-decoration: underline;
+}
+
+.small-banners {
+  height: 600px;
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.small-banners .small-banner {
+  height: 600px;
+  width: 100%;
+  border: 1px solid red;
+  position: relative;
+}
+
+.small-banner .image-small-banner img {
+  height: 600px;
+  width: 100%;
+}
+
+.image-small-banner {
+  position: absolute;
+}
+
+.button-small-banner {
+  width: 25%;
+  position: relative;
+  margin: auto;
+  top: 540px;
+}
+
+.button-small-banner > button {
+  width: 100%;
+  height: 40px;
+  background-color: #fdfdf9;
+  border: none;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.small-banner:nth-child(3) .button-small-banner {
+  width: 55%;
+}
+
+.you-may-also-like {
+  width: 95%;
+  margin: auto;
+  height: 400px;
+  border: 1px solid rebeccapurple;
+  margin-top: 20px;
+}
