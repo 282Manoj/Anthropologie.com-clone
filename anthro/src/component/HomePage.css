@@ -83,12 +83,13 @@
 }
 
 .small-banners {
-  height: 600px;
+  height: auto;
   width: 95%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  /* border: 1px solid red; */
 }
 
 .small-banners .small-banner {
@@ -270,6 +271,7 @@
   font-weight: 300;
   font-size: 13px;
   letter-spacing: 1px;
+  margin-top: 80px;
 }
 
 .apply p span {
@@ -291,7 +293,7 @@
 }
 
 .about .about-para p {
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 1px;
   line-height: 23px;
   margin-bottom: 10px;
@@ -302,4 +304,92 @@
   background-color: #fff;
   color: teal;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 760px) {
+  .banner-homepage img {
+    height: 80px;
+    width: 100%;
+    margin-top: -30px;
+  }
+
+  .shop-by-pics > div {
+    height: 400px;
+    cursor: pointer;
+  }
+
+  .shop-by-pics > div > img {
+    height: 400px;
+    width: 100%;
+  }
+
+  .big-banner {
+    height: 450px;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+  .big-banner .image-homepage img {
+    height: 450px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .small-banners {
+    height: auto;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .small-banners .small-banner {
+    height: 450px;
+    width: 100%;
+    /* border: 1px solid red; */
+    position: relative;
+  }
+
+  .small-banner .image-small-banner img {
+    height: 450px;
+    width: 100%;
+  }
+
+  .button-small-banner {
+    width: 25%;
+    position: relative;
+    margin: auto;
+    top: 380px;
+  }
+
+  .more-to-explore-image {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .explore-image div{
+    margin-top: 20px;
+  }
+
+  .explore-image div img {
+    width: 100%;
+    height: 380px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .apply {
+    height: auto;
+    width: 30%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: -30px;
+  }
 }

@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid grey;
-  margin-top: 30px;
+  margin-top: -20px;
   height: auto;
   background-color: #f7f7f2;
 }
@@ -112,7 +112,7 @@
 .lower-footer {
   height: auto;
   width: 80%;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -202,31 +202,9 @@
   margin: auto;
   justify-content: space-between;
   margin-top: 30px;
+  border: 1px solid red;
 }
 
-/* .countries > .country:nth-child(1) {
-  width: 15%;
-  border-right: 1px solid gray;
-  cursor: pointer;
-}
-
-.countries > .country:nth-child(2) {
-  width: 20%;
-  border-right: 1px solid gray;
-  cursor: pointer;
-}
-
-.countries > .country:nth-child(3) {
-  width: 20%;
-  border-right: 1px solid gray;
-  cursor: pointer;
-}
-
-.countries > .country:nth-child(4) {
-  width: 17%;
-  border-right: 1px solid gray;
-  cursor: pointer;
-} */
 
 .countries > .country p {
   cursor: pointer;
@@ -298,4 +276,96 @@
 .copy-right-right p {
   color: gray;
   font-size: 13px;
+}
+
+@media screen and (max-width: 760px) {
+  .upper-footer {
+    width: 95%;
+  }
+
+  .sign-up-for-email {
+    width: 50%;
+    /* border: 1px solid red; */
+  }
+
+  .input-singn-up {
+    width: 50%;
+    /* border: 1px solid red; */
+  }
+
+  .input-field {
+    height: 35px;
+    width: 60%;
+    border: 1px solid black;
+  }
+
+  .input-btn {
+    height: 35px;
+    width: 20%;
+    margin-right: -15px;
+  
+    /* border: 1px solid red; */
+  }
+
+  .random-text {
+    width: 80%;
+    margin-left: 15px;
+    margin-bottom: 40px;
+  }
+
+  .lower-footer {
+    height: auto;
+    width: 98%;
+    border: 1px solid red;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 26px;
+  }
+
+  .social-media {
+    height: auto;
+    width: 40%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .countries {
+    height: auto;
+    width: 40%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 30px;
+    border: 1px solid red;
+  }
+
+  .copy-right {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    margin-top: 70px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .copy-right-left li {
+    list-style-type: none;
+    font-size: 8px;
+    color: teal;
+    cursor: pointer;
+  }
+
+  .copy-right-right p {
+    color: gray;
+    font-size: 9px;
+  }
+
 }
