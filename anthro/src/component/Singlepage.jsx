@@ -3,7 +3,27 @@ import { BsAlignBottom, BsTypeUnderline } from 'react-icons/bs';
 import "./Singlepage.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useEffect } from 'react';
 const Singlepage = () => {
+  const {id} =useParams();
+  
+  const clothesingleData=useSelector((store)=>store.cloths);
+
+ 
+  const[clotheData,setClotheData] =useState({});
+
+  useEffect(()=>{
+if(id){
+  const clothe=clothesingleData.find(item=>item.id===Number(id));
+
+  clothe && setClotheData(clothe);
+}
+  },[id, clothesingleData])
+
+  console.log(clotheData)
   return (
     <>
     <div className='nav'>
@@ -12,19 +32,19 @@ const Singlepage = () => {
     </div>
     <div className='container'>
       <div className='small-img'>
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
+        <img src={clotheData.img1} alt="" />
+        <img src={clotheData.img2} alt="" />
         <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
         <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
       </div>
       <div className='large-img'>
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
+        <img src={clotheData.img1}  alt="" />
       </div>
       <div className='details'>
         <h2 style={{marginBottom:"10px",marginTop:"0px"}}>Stella Nova Emblellished <br/>One-Shoulder Dress</h2>
         <p style={{marginBottom:"10px",textDecoration:"underline"}}>Stella Nova</p>
         <p style={{marginBottom:"10px",textDecoration:"underline"}}>Write a Review</p>
-        <p style={{marginBottom:"20px"}}>$425.00</p>
+        <p style={{marginBottom:"20px"}}>${clotheData.price}</p>
         <p>Or 4 interest free installments of  $106.25 with</p>
         <p style={{marginBottom:"20px"}}>Klarna. <span>or</span> afterpay</p>
         <hr />
