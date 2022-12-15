@@ -6,12 +6,6 @@ import { BsSearch } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
 
 function Navbar() {
-  const [inputTab, setInputTab] = useState("");
-
-  const handleOnClick = () => {
-    setInputTab("active");
-  };
-
   return (
     <>
       <div className="nav-bar-main">
@@ -54,12 +48,7 @@ function Navbar() {
 
           <div className="right-buttom-navbar">
             <div className="input-div-navbar">
-              <input
-                type="text"
-                className={inputTab === "active" ? "active" : ""}
-                onClick={handleOnClick}
-                placeholder="Search Anthropologie"
-              />
+              <input type="text" placeholder="Search Anthropologie" />
               <BsSearch fontSize={20} />
             </div>
 

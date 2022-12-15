@@ -268,10 +268,10 @@ function HomePage() {
                 delight you with unexpected, distinctive finds for your closet
                 and home. We source and craft all of our products with care,
                 ensuring that any treasure you find at Anthropologie is unique,
-                just like you. Explore our dresses shop to find styles and fits
-                perfect for any occasion, from cocktail party dresses to wedding
-                guest dresses to casual daytime silhouettes. Shop BHLDN and take
-                a look at our selection of wedding dresses. Browse party skirts,
+                just like you. Explore our shop to find styles and fits perfect
+                for any occasion, from cocktail party dresses to wedding guest
+                dresses to casual daytime silhouettes. Shop BHLDN and take a
+                look at our selection of wedding dresses. Browse party skirts,
                 wide-leg pants and jeans, and blouses that will turn heads.
                 Complete your look with uncommon accessories—think only-here
                 slides and head-turning totes. Discover our expansive home

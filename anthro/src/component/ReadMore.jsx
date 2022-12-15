@@ -10,7 +10,7 @@ function ReadMore({ children }) {
   return (
     <>
       <p>{readMore ? children : children.substr(0, 431) + "..."}</p>
-      <button onClick={handleReadMOre}>
+      <button onClick={handleReadMOre} style={{ cursor: "pointer" }}>
         {readMore ? "Read Less" : "Read More"}
       </button>
     </>

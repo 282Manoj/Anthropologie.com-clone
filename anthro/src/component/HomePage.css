@@ -10,6 +10,7 @@
   width: 95%;
   margin: auto;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 .banner-homepage img {
@@ -218,6 +219,7 @@
   width: 100%;
   height: 480px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .explore-image div p:nth-child(1) {
@@ -272,6 +274,7 @@
 
 .apply p span {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .about {

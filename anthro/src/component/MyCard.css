@@ -5,6 +5,7 @@
   background-color: black;
   margin: 10px;
   color: white;
+  cursor: pointer;
 }
 
 .my-card img {
