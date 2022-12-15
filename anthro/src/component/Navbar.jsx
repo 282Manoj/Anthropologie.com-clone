@@ -4,8 +4,23 @@ import { SlGlobeAlt } from "react-icons/sl";
 import { CiUser } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [active1, setAvtive1] = useState(true);
+  const [active2, setAvtive2] = useState(false);
+
+  const handleClick1 = () => {
+    setAvtive1(!active1);
+    setAvtive2(!active2)
+
+  };
+
+  const handleClick2 = () => {
+    setAvtive2(!active2);
+    setAvtive1(!active1);
+  };
+
   return (
     <>
       <div className="nav-bar-main">
@@ -30,17 +45,27 @@ function Navbar() {
         <div className="buttom-navbar">
           {/* right side */}
           <div className="left-buttom-navbar">
-            <div className="left-buttom-navbar-left">
-              <img
-                src="https://images.ctfassets.net/5de70he6op10/7q3Z6vJ6UEPFyAPKAFZZxl/1a22eec777828277571187c43306e983/Anthropologie_Holiday_Lockup__1_update.svg"
-                alt=""
-              />
+            <div
+              className={`left-buttom-navbar-left ${active1 ? "set" : ""}`}
+              onClick={handleClick1}
+            >
+              <NavLink>
+                <img
+                  src="https://images.ctfassets.net/5de70he6op10/7q3Z6vJ6UEPFyAPKAFZZxl/1a22eec777828277571187c43306e983/Anthropologie_Holiday_Lockup__1_update.svg"
+                  alt=""
+                />
+              </NavLink>
             </div>
-            <div className="left-buttom-navbar-right">
-              <img
-                src="https://images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg"
-                alt=""
-              />
+            <div
+              className={`left-buttom-navbar-right ${active2 ? "set" : ""}`}
+              onClick={handleClick2}
+            >
+              <NavLink>
+                <img
+                  src="https://images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg"
+                  alt=""
+                />
+              </NavLink>
             </div>
           </div>
 
@@ -64,7 +89,9 @@ function Navbar() {
             <l1 className="color-teal">New!</l1>
             <l1 className="color-teal">Dresses</l1>
             <l1 className="color-teal">Clothing</l1>
-            <l1 className="color-teal">Shoes</l1>
+            <Link to="/shoe" style={{ textDecoration: "none" }}>
+              <l1 className="color-teal">Shoes</l1>
+            </Link>
             <l1 className="color-teal">Accessories</l1>
             <l1 className="color-teal">BHLDN Wedding</l1>
             <l1 className="color-teal">Home & Furniture </l1>

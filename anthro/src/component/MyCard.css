@@ -12,3 +12,20 @@
   max-width: 300px;
   min-width: 300px;
 }
+
+@media screen and (max-width: 760px) {
+  .my-card {
+    min-width: 200px;
+    max-width: 200px;
+    height: 300px;
+    background-color: black;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .my-card img {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}
