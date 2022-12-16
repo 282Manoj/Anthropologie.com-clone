@@ -87,7 +87,9 @@ function Navbar() {
             <l1 className="color-red">Gifts</l1>
             <l1 className="color-teal">New!</l1>
             <l1 className="color-teal">Dresses</l1>
+            <Link to="/shoes" style={{ textDecoration: "none" }}>
             <l1 className="color-teal">Shoes</l1>
+            </Link>
             <Link to="/clothe" style={{ textDecoration: "none" }}>
               <l1 className="color-teal">Clothing</l1>
             </Link>

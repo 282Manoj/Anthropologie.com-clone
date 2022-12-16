@@ -1,13 +1,14 @@
 import { Grid, GridItem, Heading ,Divider} from "@chakra-ui/react";
 import React from "react";
-import ClotheList from "../component/Clothe/ClotheList";
-import FilterComp from "../component/Clothe/FilterComponets";
-import Head from "../component/Clothe/Head";
+
+import Head from "../component/shoes/Head";
 import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
+import FilterComp from "../component/shoes/FilterComponets";
+import ShoesList from "../component/shoes/ShoesList";
 
 
-const Clothe = () => {
+const Shoes = () => {
   return (
     <div style={{paddingTop:"25px"}}>
         <Navbar/>
@@ -41,10 +42,10 @@ const Clothe = () => {
             fontSize="2xl"
             color="#26262C"
           >
-            Women's Clothing
+            Women's Shoes
           </Heading>
 
-          <ClotheList />
+          <ShoesList />
         </GridItem>
       </Grid>
       <Footer/>
@@ -52,4 +53,4 @@ const Clothe = () => {
   );
 };
 
-export default Clothe;
+export default Shoes;
