@@ -11,14 +11,13 @@ function Navbar() {
   const [active2, setAvtive2] = useState(false);
 
   const handleClick1 = () => {
-    setAvtive1(!active1);
-    setAvtive2(!active2)
-
+    setAvtive1(true);
+    setAvtive2(false);
   };
 
   const handleClick2 = () => {
-    setAvtive2(!active2);
-    setAvtive1(!active1);
+    setAvtive2(true);
+    setAvtive1(false);
   };
 
   return (
@@ -49,7 +48,7 @@ function Navbar() {
               className={`left-buttom-navbar-left ${active1 ? "set" : ""}`}
               onClick={handleClick1}
             >
-              <NavLink>
+              <NavLink to="/">
                 <img
                   src="https://images.ctfassets.net/5de70he6op10/7q3Z6vJ6UEPFyAPKAFZZxl/1a22eec777828277571187c43306e983/Anthropologie_Holiday_Lockup__1_update.svg"
                   alt=""
@@ -88,9 +87,9 @@ function Navbar() {
             <l1 className="color-red">Gifts</l1>
             <l1 className="color-teal">New!</l1>
             <l1 className="color-teal">Dresses</l1>
-            <l1 className="color-teal">Clothing</l1>
-            <Link to="/shoe" style={{ textDecoration: "none" }}>
-              <l1 className="color-teal">Shoes</l1>
+            <l1 className="color-teal">Shoes</l1>
+            <Link to="/clothe" style={{ textDecoration: "none" }}>
+              <l1 className="color-teal">Clothing</l1>
             </Link>
             <l1 className="color-teal">Accessories</l1>
             <l1 className="color-teal">BHLDN Wedding</l1>

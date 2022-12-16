@@ -6,6 +6,7 @@ import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import MyCard from "./MyCard";
 import ReadMore from "./ReadMore";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -106,31 +107,35 @@ function HomePage() {
         {/* 3 small banner */}
 
         <div className="small-banners">
-          <div className="small-banner">
-            <div className="image-small-banner">
-              <img
-                src="https://images.ctfassets.net/5de70he6op10/6HzwDJ0UOm79B8yDxaLdZl/706de5f3b83a54dd4bb0a54f48738f1a/RR_Tops_Default.jpg?w=856&q=80&fm=webp"
-                alt=""
-              />
-            </div>
+          <Link to="/Clothe">
+            <div className="small-banner">
+              <div className="image-small-banner">
+                <img
+                  src="https://images.ctfassets.net/5de70he6op10/6HzwDJ0UOm79B8yDxaLdZl/706de5f3b83a54dd4bb0a54f48738f1a/RR_Tops_Default.jpg?w=856&q=80&fm=webp"
+                  alt=""
+                />
+              </div>
 
-            <div className="button-small-banner">
-              <button>shop tops</button>
+              <div className="button-small-banner">
+                <button>shop tops</button>
+              </div>
             </div>
-          </div>
+          </Link>
 
-          <div className="small-banner">
-            <div className="image-small-banner">
-              <img
-                src="https://images.ctfassets.net/5de70he6op10/6TIhpD3Lh2NHWsTFjH5A4h/abd257d017b494dc9cf077bc14906653/RR_Shoes_Default.jpg?w=856&q=80&fm=webp"
-                alt=""
-              />
-            </div>
+          <Link to="/shoes">
+            <div className="small-banner">
+              <div className="image-small-banner">
+                <img
+                  src="https://images.ctfassets.net/5de70he6op10/6TIhpD3Lh2NHWsTFjH5A4h/abd257d017b494dc9cf077bc14906653/RR_Shoes_Default.jpg?w=856&q=80&fm=webp"
+                  alt=""
+                />
+              </div>
 
-            <div className="button-small-banner">
-              <button>shop shoes</button>
+              <div className="button-small-banner">
+                <button>shop shoes</button>
+              </div>
             </div>
-          </div>
+          </Link>
 
           <div className="small-banner">
             <div className="image-small-banner">
