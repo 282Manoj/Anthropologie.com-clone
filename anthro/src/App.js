@@ -11,8 +11,6 @@ function App() {
      <Route path="/" element={<HomePage/>}></Route>
         {/* <Route path="/cart" element={<Cartpage/>}></Route> */}
         <Route path="/singlepage" element={<Singlepage/>}></Route>
-   
-      
      </Routes>
 
     </>
