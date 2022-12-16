@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import SIgn_img from './SIgn_img'
-import { useNavigate } from 'react-router-dom'
+import Sign_img from './Sign_img'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
-
+const SignIn = () => {
     const history = useNavigate();
 
     const [inpval, setInpval] = useState({
@@ -73,7 +72,7 @@ const Login = () => {
 
                     localStorage.setItem("user_login", JSON.stringify(userlogin))
 
-                    history("/details")
+                    history("/")
                 }
             }
         }
@@ -81,10 +80,10 @@ const Login = () => {
     }
 
     return (
-        <>
-            <div className="container mt-3">
-                <section className='d-flex justify-content-between'>
-                    <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
+        <div>
+            <div className="container mt-3" >
+            {/* <section className='d-flex justify-content-between'> */}
+                    <div className="left_data mt-3 p-3" style={{width: "100%" }}>
                         <h3 className='text-center col-lg-6'>Sign IN</h3>
                         <Form >
 
@@ -101,14 +100,14 @@ const Login = () => {
                                 Submit
                             </Button>
                         </Form>
-                        <p className='mt-3'>Already Have an Account <span>SignIn</span> </p>
                     </div>
-                    <SIgn_img />
-                </section>
+                    <Sign_img/>
+
+                {/* </section> */}
                 <ToastContainer />
             </div>
-        </>
+        </div>
     )
 }
 
-export default Login
+export default SignIn

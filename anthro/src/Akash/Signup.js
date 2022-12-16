@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import SIgn_img from './SIgn_img'
+import Sign_img from './Sign_img'
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Home = () => {
+const Signup = () => {
 
     const history = useNavigate();
 
@@ -71,7 +71,7 @@ const Home = () => {
             });
         } else {
             console.log("data added succesfully");
-            history("/login")
+            history("/signin")
             localStorage.setItem("useryoutube",JSON.stringify([...data,inpval]));
 
         }
@@ -81,7 +81,7 @@ const Home = () => {
     return (
         <>
             <div className="container mt-3">
-                <section className='d-flex justify-content-between'>
+                {/* <section className='d-flex justify-content-between' > */}
                     <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
                         <h3 className='text-center col-lg-6'>Sign Up</h3>
                         <Form >
@@ -107,14 +107,14 @@ const Home = () => {
                                 Submit
                             </Button>
                         </Form>
-                        <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
+                        <p className='mt-3'>Already Have an Account <span><NavLink to="/signin">SignIn</NavLink></span> </p>
                     </div>
-                    <SIgn_img />
-                </section>
+                    <Sign_img />
+                {/* </section> */}
                 <ToastContainer />
             </div>
         </>
     )
 }
 
-export default Home
+export default Signup
