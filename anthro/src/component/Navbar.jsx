@@ -11,13 +11,13 @@ function Navbar() {
   const [active2, setAvtive2] = useState(false);
 
   const handleClick1 = () => {
-    setAvtive1(!active1);
-    setAvtive2(!active2);
+    setAvtive1(true);
+    setAvtive2(false);
   };
 
   const handleClick2 = () => {
-    setAvtive2(!active2);
-    setAvtive1(!active1);
+    setAvtive2(true);
+    setAvtive1(false);
   };
 
   return (

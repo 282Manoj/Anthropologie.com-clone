@@ -68,3 +68,111 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+<!-- 
+
+<div className="shoping-user-details">
+            <div className="heading-shop">
+              <p>Shipping Address</p>
+            </div>
+
+            <form>
+              <div className="region-form">
+                <p className="para-form">Country/Region*</p>
+                <select>
+                  <option value="">Inida</option>
+                  <option value="">USA</option>
+                  <option value="">UK</option>
+                  <option value="">Austrelia</option>
+                  <option value="">Poland</option>
+                  <option value="">West Inidis</option>
+                  <option value="">South Africa</option>
+                  <option value="">Netherland</option>
+                  <option value="">Singapor</option>
+                  <option value="">Ireland</option>
+                  <option value="">Hungry</option>
+                  <option value="">Isle Of Man</option>
+                  <option value="">Japan</option>
+                  <option value="">China</option>
+                  <option value="">Thailand</option>
+                  <option value="">Italy</option>
+                  <option value="">Jordan</option>
+                  <option value="">Jamaica</option>
+                  <option value="">Kuweit</option>
+                  <option value="">Latvia</option>
+                  <option value="">Mexico</option>
+                  <option value="">Malta</option>
+                  <option value="">Oman</option>
+                  <option value="">Qatar</option>
+                </select>
+              </div>
+
+              <div className="name-form">
+                <div className="firstlast-name-form">
+                  <p className="para-form">First Name*</p>
+                  <input type="text" className="input-form" />
+                </div>
+
+                <div className="firstlast-name-form">
+                  <p className="para-form">Last Name*</p>
+                  <input type="text" className="input-form" />
+                </div>
+              </div>
+
+              <div className="address-form">
+                <p className="para-form">Street Address1*</p>
+                <input
+                  type="text"
+                  className="input-form"
+                  placeholder="35 character limit, continue below."
+                />
+              </div>
+
+              <div className="address-form">
+                <p className="para-form">Address 2</p>
+                <input
+                  type="text"
+                  className="input-form"
+                  placeholder="35 character limit, continue below."
+                />
+              </div>
+
+              <div className="check-box-form">
+                <input type="checkbox" name="" id="" />
+                <p className="para-form">PO Box</p>
+              </div>
+
+              <div className="city-region">
+                <div className="cityregion-form">
+                  <p className="para-form">City*</p>
+                  <input type="text" className="input-form" />
+                </div>
+
+                <div className="cityregion-form">
+                  <p className="para-form">City*</p>
+                  <input type="text" className="input-form" />
+                </div>
+              </div>
+
+              <div className="post-code">
+                <div className="postcode-form">
+                  <p className="para-form">Postcode*</p>
+                  <input type="text" className="input-form" />
+                </div>
+              </div>
+
+              <div className="mobile-code">
+                <div className="mobile-form">
+                  <p className="para-form">Mobile Number*</p>
+                  <input
+                    type="number"
+                    className="input-form"
+                    placeholder="+91"
+                  />
+                </div>
+              </div>
+            </form>
+          </div> -->
