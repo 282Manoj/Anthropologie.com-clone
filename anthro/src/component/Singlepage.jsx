@@ -10,10 +10,12 @@ import { useEffect } from 'react';
 const Singlepage = () => {
   const {id} =useParams();
   
-  const clothesingleData=useSelector((store)=>store.cloths);
-
+  const clothesingleData=useSelector((store)=>store.clotheReducer.cloths );
+const shoessingleData=useSelector((store)=>store.shoesReducer.Shoes);
+// console.log(shoessingleData);
  
   const[clotheData,setClotheData] =useState({});
+  const[shoesData,setShoesData] =useState({});
 
   useEffect(()=>{
 if(id){
@@ -21,9 +23,14 @@ if(id){
 
   clothe && setClotheData(clothe);
 }
-  },[id, clothesingleData])
 
-  console.log(clotheData)
+if(id){
+  const shoes=shoessingleData.find(item=>item.id===Number(id));
+  shoes && setShoesData(shoes);
+}
+  },[id, clothesingleData,shoessingleData])
+
+  // console.log(shoesData)
   return (
     <>
     <div className='nav'>
@@ -32,13 +39,13 @@ if(id){
     </div>
     <div className='container'>
       <div className='small-img'>
-        <img src={clotheData.img1} alt="" />
-        <img src={clotheData.img2} alt="" />
+        <img src={clotheData.img1 || shoesData.img1}  alt="" />
+        <img src={clotheData.img2 || shoesData.img2} alt="" />
         <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
         <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
       </div>
       <div className='large-img'>
-        <img src={clotheData.img1}  alt="" />
+        <img src={clotheData.img1 || shoesData.img1}  alt="" />
       </div>
       <div className='details'>
         <h2 style={{marginBottom:"10px",marginTop:"0px"}}>Stella Nova Emblellished <br/>One-Shoulder Dress</h2>
