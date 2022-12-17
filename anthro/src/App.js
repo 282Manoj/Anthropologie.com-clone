@@ -5,6 +5,7 @@ import Singlepage from "./component/Singlepage";
 import {Route,Routes} from "react-router-dom"
 import Login from "./Akash/Login";
 import Signup from "./Akash/Signup";
+import { CartPage } from "./Akash/Cart/CartPage";
 function App() {
   return (
     <>
@@ -15,10 +16,9 @@ function App() {
         <Route path="/singlepage" element={<Singlepage/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/cart" element={<CartPage/>}></Route>
 
 
-   
-      
      </Routes>
 
     </>
