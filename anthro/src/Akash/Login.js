@@ -73,7 +73,7 @@ const Login = () => {
 
                     localStorage.setItem("user_login", JSON.stringify(userlogin))
 
-                    history("/details")
+                    history("/")
                 }
             }
         }
@@ -83,7 +83,7 @@ const Login = () => {
     return (
         <>
             <div className="container mt-3">
-                <section className='d-flex justify-content-between'>
+                {/* <section className='d-flex justify-content-between'> */}
                     <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
                         <h3 className='text-center col-lg-6'>Sign IN</h3>
                         <Form >
@@ -101,10 +101,9 @@ const Login = () => {
                                 Submit
                             </Button>
                         </Form>
-                        <p className='mt-3'>Already Have an Account <span>SignIn</span> </p>
                     </div>
                     <SIgn_img />
-                </section>
+                {/* </section> */}
                 <ToastContainer />
             </div>
         </>
