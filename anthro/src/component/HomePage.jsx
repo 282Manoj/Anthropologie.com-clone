@@ -6,6 +6,7 @@ import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import MyCard from "./MyCard";
 import ReadMore from "./ReadMore";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -106,31 +107,35 @@ function HomePage() {
         {/* 3 small banner */}
 
         <div className="small-banners">
-          <div className="small-banner">
-            <div className="image-small-banner">
-              <img
-                src="https://images.ctfassets.net/5de70he6op10/6HzwDJ0UOm79B8yDxaLdZl/706de5f3b83a54dd4bb0a54f48738f1a/RR_Tops_Default.jpg?w=856&q=80&fm=webp"
-                alt=""
-              />
-            </div>
+          <Link to="/Clothe">
+            <div className="small-banner">
+              <div className="image-small-banner">
+                <img
+                  src="https://images.ctfassets.net/5de70he6op10/6HzwDJ0UOm79B8yDxaLdZl/706de5f3b83a54dd4bb0a54f48738f1a/RR_Tops_Default.jpg?w=856&q=80&fm=webp"
+                  alt=""
+                />
+              </div>
 
-            <div className="button-small-banner">
-              <button>shop tops</button>
+              <div className="button-small-banner">
+                <button>shop tops</button>
+              </div>
             </div>
-          </div>
+          </Link>
 
-          <div className="small-banner">
-            <div className="image-small-banner">
-              <img
-                src="https://images.ctfassets.net/5de70he6op10/6TIhpD3Lh2NHWsTFjH5A4h/abd257d017b494dc9cf077bc14906653/RR_Shoes_Default.jpg?w=856&q=80&fm=webp"
-                alt=""
-              />
-            </div>
+          <Link to="/shoes">
+            <div className="small-banner">
+              <div className="image-small-banner">
+                <img
+                  src="https://images.ctfassets.net/5de70he6op10/6TIhpD3Lh2NHWsTFjH5A4h/abd257d017b494dc9cf077bc14906653/RR_Shoes_Default.jpg?w=856&q=80&fm=webp"
+                  alt=""
+                />
+              </div>
 
-            <div className="button-small-banner">
-              <button>shop shoes</button>
+              <div className="button-small-banner">
+                <button>shop shoes</button>
+              </div>
             </div>
-          </div>
+          </Link>
 
           <div className="small-banner">
             <div className="image-small-banner">
@@ -268,10 +273,10 @@ function HomePage() {
                 delight you with unexpected, distinctive finds for your closet
                 and home. We source and craft all of our products with care,
                 ensuring that any treasure you find at Anthropologie is unique,
-                just like you. Explore our dresses shop to find styles and fits
-                perfect for any occasion, from cocktail party dresses to wedding
-                guest dresses to casual daytime silhouettes. Shop BHLDN and take
-                a look at our selection of wedding dresses. Browse party skirts,
+                just like you. Explore our shop to find styles and fits perfect
+                for any occasion, from cocktail party dresses to wedding guest
+                dresses to casual daytime silhouettes. Shop BHLDN and take a
+                look at our selection of wedding dresses. Browse party skirts,
                 wide-leg pants and jeans, and blouses that will turn heads.
                 Complete your look with uncommon accessories—think only-here
                 slides and head-turning totes. Discover our expansive home
@@ -283,8 +288,9 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+
+      <Footer />
     </>
   );
 }
