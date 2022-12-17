@@ -17,16 +17,19 @@ const ClotheList = () => {
   useEffect(() => {
     // if i dont have any clothe in redux,then make the api call
     if (location || clothe.length === 0) {
+      const sortBy= searchParams.get("sort")
       const getclotheParams ={
         params:{
           category: searchParams.getAll("category"),
-          size:searchParams.getAll("size")
+          size:searchParams.getAll("size"),
+          _sort: sortBy && "price",
+          _order:sortBy,
         }
       }
 
       dispatch(getClothes(getclotheParams));
     }
-  }, [clothe.length, dispatch,location.search,location,searchParams]);
+  }, [location.search,clothe.length,dispatch,location,searchParams]);
 
 
   return (

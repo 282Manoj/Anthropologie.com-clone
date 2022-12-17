@@ -19,10 +19,13 @@ const ShoesList = () => {
   useEffect(() => {
     // if i dont have any clothe in redux,then make the api call
     if (location || Shoes.length === 0) {
+      const sortBy= searchParams.get("sort")
       const getShoesParams ={
         params:{
           category: searchParams.getAll("category"),
-          size:searchParams.getAll("size")
+          size:searchParams.getAll("size"),
+          _sort: sortBy && "price",
+          _order:sortBy,
         }
       }
 

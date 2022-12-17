@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Stack, Checkbox, Container, Text, Heading } from "@chakra-ui/react";
+import { Stack, Checkbox, Container, Text, Heading, Radio } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -7,13 +7,14 @@ const FilterComp = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   // when ever the page refresh we need to check if the url had any data,before setting the data to an empty array
   const intialCategory = searchParams.getAll("category");
-
+  const initialSort = searchParams.getAll("sort");
 
   const initialSize=searchParams.getAll("size");
   // console.log(intialCategory);
   const [category, setCategory] = useState(intialCategory || []);
   const [size, setSize] = useState(initialSize || []);
 
+  const [sort, setSortBy] = useState(initialSort[0] || "");
   const handleFilterCheckbox = (e) => {
     // check if the data is present in the category,
     const newCategories = [...category];
@@ -41,15 +42,19 @@ const FilterComp = () => {
     }
     setSize(newsize);
   };
+  const handleSort = (e) => {
+    setSortBy(e.target.value);
+  };
   // console.log(category);
   // if the category changes, update the valuein  the url search params
   useEffect(() => {
     let params = {};
     params.category = category;
     params.size=size;
+    sort && (params.sort = sort);
     // console.log(params);
     setSearchParams(params);
-  }, [category,size, setSearchParams]);
+  }, [category,size, setSearchParams,sort]);
 
   return (
     
@@ -138,6 +143,20 @@ const FilterComp = () => {
         >
           XL
         </Checkbox>
+      </Stack>
+
+      <Stack padding={2} marginLeft={-3} >
+        <Heading size="md">Sorting by Price:</Heading>
+       
+        <Radio value="asc" name="sortBy" defaultChecked={sort === "asc"}  onChange={handleSort}>
+          Low to High
+        </Radio>
+        <Radio value="desc" name="sortBy" defaultChecked={sort === "desc"} onChange={handleSort}>
+          High to Low
+        </Radio>
+      
+        
+    
       </Stack>
     </Container>
   );
