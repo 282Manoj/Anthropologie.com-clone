@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsAlignBottom, BsTypeUnderline } from 'react-icons/bs';
+// import { BsAlignBottom, BsTypeUnderline } from 'react-icons/bs';
 import "./Singlepage.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -41,8 +41,8 @@ if(id){
       <div className='small-img'>
         <img src={clotheData.img1 || shoesData.img1}  alt="" />
         <img src={clotheData.img2 || shoesData.img2} alt="" />
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
+        <img src={clotheData.img1 || shoesData.img1} alt="" />
+        <img src={clotheData.img2 || shoesData.img2} alt="" />
       </div>
       <div className='large-img'>
         <img src={clotheData.img1 || shoesData.img1}  alt="" />
@@ -57,7 +57,10 @@ if(id){
         <hr />
         <div className='color-div'>
             <p>Color:<span style={{fontSize:"20px"}}>  Assorted</span></p>
-            <img src="https://images.urbndata.com/is/image/Anthropologie/4130573040021_000_s?fit=constrain&hei=56&qlt=75" alt="" />
+            <img src="https://images.urbndata.com/is/image/Anthropologie/4130573040021_000_s?fit=constrain&hei=56&qlt=75" alt="color" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Black.png/220px-Black.png" alt="color" />
+            <img src="https://about.canva.com/wp-content/uploads/sites/8/2019/03/pink.png" alt="color" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Light_blue.png" alt="color" />
         </div>
         <p className='size-star'>Size*</p>
         <div className='size'>
@@ -92,10 +95,10 @@ if(id){
       </div>
       <div className='like'>
         <h3>You May Also Like</h3>
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
-        <img src="https://images.urbndata.com/is/image/Anthropologie/66667379_042_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
+        <img src={clotheData.img1 || shoesData.img1} alt="pic" />
+        <img src={clotheData.img2 || shoesData.img2} alt="pic" />
+        <img src= {clotheData.img1 || shoesData.img1}alt="pic" />
+        <img src={clotheData.img2 || shoesData.img2}alt="pic" />
       </div>
     </div>
 
