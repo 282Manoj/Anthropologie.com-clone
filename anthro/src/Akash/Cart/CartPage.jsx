@@ -24,11 +24,14 @@ import Footer from '../../component/Footer'
     useEffect(() => {
       dispatch(getCartItem())
     }, [])
-    console.log(cart);
+    // console.log(cart);
     return(
       <>
+      <Box pt="30px">
       <Navbar/>
-    <Box
+      </Box>
+    <Box margin="120px"
+    // mt="5em"
       maxW={{
         base: '3xl',
         lg: '7xl',

@@ -64,17 +64,19 @@ export const updateCartItem = (payload) => (dispatch) => {
 };
 
 export const deleteCartItem = (payload) => (dispatch) => {
+  // console.log("pay",payload)
   dispatch({
     type: types.DELETE_ITEM_REQUEST,
   });
 
-  axios
-    .get("http://localhost:8080/cart")
+  return axios
+    .delete(`http://localhost:8080/cart/${payload}`)
     .then((res) => {
-      dispatch({
+     return dispatch({
         type: types.DELETE_ITEM_SUCCESS,
-        payload: res.data,
+        // payload: res.data,
       });
+      // getCartItem();
     })
     .catch(() => {
       dispatch({

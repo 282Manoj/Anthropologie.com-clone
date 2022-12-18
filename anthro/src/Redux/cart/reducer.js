@@ -10,6 +10,7 @@ export const reducer = (state = InitialState,action) => {
     const { type, payload } = action;
 
     switch (type) {
+//ADD
         case types.ADD_TO_CART_REQUEST:
             return {
                 ...state,
@@ -29,6 +30,7 @@ export const reducer = (state = InitialState,action) => {
                 isLoading:false,
                 isError:true
             }
+              //GET
 
             case types.GET_CART_ITEM_REQUEST:
                 return {
@@ -49,6 +51,47 @@ export const reducer = (state = InitialState,action) => {
                     isLoading:false,
                     isError:true
                 }
+              //DELETE
+
+                case types.DELETE_ITEM_REQUEST:
+                    return {
+                        ...state,
+                        isLoading:false,
+                        isError:true
+                    }
+                    case types.DELETE_ITEM_SUCCESS:
+                    return {
+                        ...state,
+                        isLoading:false,
+                        isError:true
+                    }
+                    case types.DELETE_ITEM_FAILURE:
+                    return {
+                        ...state,
+                        isLoading:false,
+                        isError:true
+                    }
+                  //UPDATE
+                  
+                    case types.QUANTITY_UPDATE_REQUEST:
+                    return {
+                        ...state,
+                        isLoading:false,
+                        isError:true
+                    }
+
+                    case types.QUANTITY_UPDATE_SUCCESS:
+                    return {
+                        ...state,
+                        isLoading:false,
+                        isError:true
+                    }
+                    case types.QUANTITY_UPDATE_FAILURE:
+                        return {
+                            ...state,
+                            isLoading:false,
+                            isError:true
+                        }
         default:
          return state
     }
