@@ -36,6 +36,11 @@
   color: teal;
   font-size: 13px;
   text-align: center;
+  cursor: pointer;
+}
+
+.text-navbar:hover{
+  text-decoration: underline;
 }
 
 .user-navbar {
