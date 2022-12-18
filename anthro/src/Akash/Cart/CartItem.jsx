@@ -2,6 +2,10 @@ import { CloseButton, Flex, Link, Select, useColorModeValue } from '@chakra-ui/r
 import * as React from 'react'
 import { PriceTag } from './PriceTag'
 import { CartProductMeta } from './CartProductMeta'
+import { useDispatch} from 'react-redux'
+import { getCartItem } from '../../Redux/cart/action'
+import { useEffect } from 'react'
+
 const QuantitySelect = (props) => {
   return (
     <Select
@@ -17,19 +21,26 @@ const QuantitySelect = (props) => {
     </Select>
   )
 }
-
 export const CartItem = (props) => {
+  const dispatch=useDispatch();
+
+  useEffect(() => {
+    dispatch(getCartItem())
+  }, [])
+  // console.log(cart)
   const {
     isGiftWrapping,
+    category,
     name,
-    description,
+    title,
     quantity,
-    imageUrl,
+    img1,
     currency,
     price,
     onChangeQuantity,
     onClickDelete,
   } = props
+  console.log("props",props)
   return (
     <Flex
       direction={{
@@ -40,9 +51,9 @@ export const CartItem = (props) => {
       align="center"
     >
       <CartProductMeta
-        name={name}
-        description={description}
-        image={imageUrl}
+        name={category}
+        description={title}
+        image={img1}
         isGiftWrapping={isGiftWrapping}
       />
 
