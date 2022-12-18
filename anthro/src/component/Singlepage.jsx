@@ -6,23 +6,23 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useState } from "react";
-import { useEffect } from "react";
-const Singlepage = () => {
-  const { id } = useParams();
-
-  const clothesingleData = useSelector((store) => store.cloths);
-
-import React from 'react'
-// import { BsAlignBottom, BsTypeUnderline } from 'react-icons/bs';
-import "./Singlepage.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import { useSelector,useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { addCartItem } from '../Redux/cart/action';
+
+
+
+
+import { useEffect } from "react";
+import "./Singlepage.css";
+
+
+
+// import { BsAlignBottom, BsTypeUnderline } from 'react-icons/bs';
+
+
 const Singlepage = () => {
   const {id} =useParams();
   const dispatch=useDispatch();
@@ -35,7 +35,7 @@ const shoessingleData=useSelector((store)=>store.shoesReducer.Shoes);
   const[shoesData,setShoesData] =useState({});
 
 
-  const [clotheData, setClotheData] = useState({});
+
 
 
   useEffect(() => {
@@ -65,18 +65,8 @@ const shoessingleData=useSelector((store)=>store.shoesReducer.Shoes);
             alt=""
           />
 
-  clothe && setClotheData(clothe);
-}
 
-if(id){
-  const shoes=shoessingleData.find(item=>item.id===Number(id));
-  shoes && setShoesData(shoes);
-}
-  },[id, clothesingleData,shoessingleData])
-
-  // console.log(shoesData)
-  return (
-    <>
+    </div>
     <div className='nav'>
 
     <Navbar/>
@@ -196,7 +186,7 @@ if(id){
           />
         </div>
 
-        </select>
+
         <Link to="/cart">
         <div className='button-div'>
 
@@ -224,6 +214,6 @@ if(id){
       {/* </div> */}
     </>
   );
-};
+
 
 export default Singlepage;
