@@ -19,12 +19,12 @@ function HomePage() {
             alt=""
           />
         </div>
-
+<Link to="/clothe">
         <div className="shop-by-pics">
           <div>
             <img
               src="https://images.ctfassets.net/5de70he6op10/1UtgIRn3AHo7yfB3CsbYdw/ced16c178459bc64efcf64a82422808b/LL_M1a.jpg?w=856&q=80&fm=webp"
-              alt=""
+              alt="pic"
             />
           </div>
           <div>
@@ -58,6 +58,7 @@ function HomePage() {
             />
           </div>
         </div>
+        </Link>
 
         {/* ///////////////////////////////////////////////////////////////////////////////////// */}
 
