@@ -71,7 +71,7 @@ const Signup = () => {
             });
         } else {
             console.log("data added succesfully");
-            history("/login")
+            history("/signin")
             localStorage.setItem("useryoutube",JSON.stringify([...data,inpval]));
 
         }
