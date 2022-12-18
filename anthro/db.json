@@ -17,6 +17,24 @@
       "category": "Joslin",
       "size": "M",
       "price": 48
+    },
+    {
+      "id": 3,
+      "img1": "https://images.urbndata.com/is/image/Anthropologie/66667379_080_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+      "img2": "https://images.urbndata.com/is/image/Anthropologie/66667379_080_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+      "title": "FREECITY Super-Vintage Sweat Pants",
+      "category": "Joslin",
+      "size": "S",
+      "price": 235
+    },
+    {
+      "id": 2,
+      "img1": "https://images.urbndata.com/is/image/Anthropologie/66667015_066_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+      "img2": "https://images.urbndata.com/is/image/Anthropologie/66667015_066_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+      "title": "FREECITY Super-VIntage Long-Sleeve",
+      "size": "M",
+      "category": "Joslin",
+      "price": 215
     }
   ],
   "cloths": [

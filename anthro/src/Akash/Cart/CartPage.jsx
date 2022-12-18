@@ -13,6 +13,8 @@ import { getCartItem } from '../../Redux/cart/action'
   import { CartItem } from './CartItem'
   import { CartOrderSummary } from './CartOrderSummary'
   import { useEffect } from 'react'
+import Navbar from '../../component/Navbar'
+import Footer from '../../component/Footer'
   // import { cartData } from './_data'
   
   export const CartPage = () => {
@@ -24,6 +26,8 @@ import { getCartItem } from '../../Redux/cart/action'
     }, [])
     console.log(cart);
     return(
+      <>
+      <Navbar/>
     <Box
       maxW={{
         base: '3xl',
@@ -81,5 +85,7 @@ import { getCartItem } from '../../Redux/cart/action'
         </Flex>
       </Stack>
     </Box>
+    <Footer/>
+    </>
   )
   }

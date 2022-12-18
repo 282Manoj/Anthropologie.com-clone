@@ -33,7 +33,9 @@ function Navbar() {
 
             <div className="user-navbar">
               <CiUser fontSize={22} color="teal" />
-              <div className="text-navbar">Sign In / Sign Up</div>
+              
+              <div className="text-navbar"><Link to="/signin" style={{ textDecoration: "none" }}>Sign In </Link> <Link to="/signup" style={{ textDecoration: "none" }}>/ Sign Up</Link></div>
+             
             </div>
           </div>
         </div>

@@ -5,6 +5,8 @@ import SIgn_img from './SIgn_img'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
 const Login = () => {
 
@@ -82,10 +84,11 @@ const Login = () => {
 
     return (
         <>
+        <Navbar/>
             <div className="container mt-3">
                 {/* <section className='d-flex justify-content-between'> */}
                     <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-                        <h3 className='text-center col-lg-6'>Sign IN</h3>
+                        <h3 className='text-center col-lg-6' style={{padding:"10px"}}>Sign IN</h3>
                         <Form >
 
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
@@ -106,6 +109,7 @@ const Login = () => {
                 {/* </section> */}
                 <ToastContainer />
             </div>
+            <Footer/>
         </>
     )
 }

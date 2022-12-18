@@ -3,8 +3,8 @@ import React from 'react'
 import "./Singlepage.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useParams } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { addCartItem } from '../Redux/cart/action';
@@ -86,12 +86,14 @@ if(id){
             <option value="9">9</option>
             <option value="10">10</option>
         </select>
+        <Link to="/cart">
         <div className='button-div'>
 
         <button onClick={()=>dispatch(addCartItem(
           clotheData || shoesData
-        ))}>ADD  TO  BASKET</button>
+        ))}>ADD  TO  BASKET</button>       
         </div>
+        </Link>
       <div className='addto'>
         <p>Add To Registry</p>
         <p>Add to Wish List</p>
