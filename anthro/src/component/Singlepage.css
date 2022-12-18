@@ -54,12 +54,13 @@
 }
 .color-div{
     margin-top: 10px;
+    display: flex;
 }
 .color-div>img{
     /* border:1px solid black; */
-    border-radius: 50%;
-    margin: 1px;
-    padding: 1px;
+    border-radius: 70%;
+    margin: 2px;
+    padding: 2px;
     width:40px;
     /* margin-top:10px; */
 }

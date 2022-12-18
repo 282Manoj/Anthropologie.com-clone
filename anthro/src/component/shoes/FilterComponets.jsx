@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Stack,
-  Checkbox,
-  Container,
-  Text,
-  Heading,
-  Radio,
-  
-} from "@chakra-ui/react";
+import { Stack, Checkbox, Container, Text, Heading, Radio } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -15,13 +7,13 @@ const FilterComp = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   // when ever the page refresh we need to check if the url had any data,before setting the data to an empty array
   const intialCategory = searchParams.getAll("category");
-
-  const initialSize = searchParams.getAll("size");
   const initialSort = searchParams.getAll("sort");
-  console.log(initialSort);
+
+  const initialSize=searchParams.getAll("size");
   // console.log(intialCategory);
   const [category, setCategory] = useState(intialCategory || []);
   const [size, setSize] = useState(initialSize || []);
+
   const [sort, setSortBy] = useState(initialSort[0] || "");
   const handleFilterCheckbox = (e) => {
     // check if the data is present in the category,
@@ -50,8 +42,6 @@ const FilterComp = () => {
     }
     setSize(newsize);
   };
-
-  //sorting
   const handleSort = (e) => {
     setSortBy(e.target.value);
   };
@@ -60,83 +50,66 @@ const FilterComp = () => {
   useEffect(() => {
     let params = {};
     params.category = category;
-    params.size = size;
+    params.size=size;
     sort && (params.sort = sort);
     // console.log(params);
     setSearchParams(params);
-  }, [category, size, setSearchParams, sort]);
+  }, [category,size, setSearchParams,sort]);
 
   return (
+    
+
     <Container startContent lineHeight={8}>
-      <Text
-        style={{ cursor: "pointer", fontSize: "14px", marginBottom: "10px" }}
-      >
-        Clothing
-      </Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>New!</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Top-Rated</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Activewear</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Blazers</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>
-        Cocktail & Party Dresses
-      </Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>
-        Lounge & Casual Dresses
-      </Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>
-        Little Black Dresses
-      </Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>
-        Little White Dresses
-      </Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Maxi Dresses</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Midi Dresses</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>
-        Mini & Tunic Dresses
-      </Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Jumpsuits</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Skirts</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Sweaters</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Swimwear</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Tops & Tees</Text>
-      <Text style={{ cursor: "pointer", fontSize: "14px" }}>Petites</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px",marginBottom:"10px" }}>Shoes</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>New!</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Top-Rated</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Boots & Booties</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Cold Weather Boots</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Flats</Text>
+      <Text style={{ cursor: "pointer" ,fontSize:"14px"}}>Heels & Wedges</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Mules & Clogs</Text>
+      <Text style={{ cursor: "pointer" ,fontSize:"14px"}}>Sandals</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Slippers</Text>
+      <Text style={{ cursor: "pointer" ,fontSize:"14px"}}>Sneakers</Text>
+      <Text style={{ cursor: "pointer",fontSize:"14px" }}>Socks & Tights</Text>
+      
 
       <Stack padding={5} marginLeft={-5}>
         <Heading size="md">Filter by Brand:</Heading>
-        <Checkbox
-          checked={category.includes("Joslin")}
+        <Checkbox 
+          checked={category.includes("ALOHAS")}
           onChange={handleFilterCheckbox}
-          value="Joslin"
+          value="ALOHAS"
         >
-          Joslin
+          ALOHAS
         </Checkbox>
 
         <Checkbox
-          checked={category.includes("Letluv")}
+          checked={category.includes(" ASICS")}
           onChange={handleFilterCheckbox}
-          value="Letluv"
+          value="ASICS"
         >
-          Letluv
+          ASICS
         </Checkbox>
 
         <Checkbox
-          checked={category.includes("Maaji")}
+          checked={category.includes("Bombas")}
           onChange={handleFilterCheckbox}
-          value="Maaji"
+          value="Bombas"
         >
-          Maaji
+          Bombas
         </Checkbox>
 
         <Checkbox
-          checked={category.includes("Hutch")}
+          checked={category.includes("Faguo")}
           onChange={handleFilterCheckbox}
-          value="Hutch"
+          value="Faguo"
         >
-          Hutch
+          Faguo
         </Checkbox>
       </Stack>
 
-      <Stack padding={2} marginLeft={-3}>
+      <Stack padding={5} marginLeft={-5}>
         <Heading size="md">Filter by Size:</Heading>
         <Checkbox
           checked={size.includes("S")}
@@ -161,6 +134,8 @@ const FilterComp = () => {
           L
         </Checkbox>
 
+      
+
         <Checkbox
           checked={size.includes("XL")}
           onChange={handleFilterCheckboxSize}
@@ -169,8 +144,6 @@ const FilterComp = () => {
           XL
         </Checkbox>
       </Stack>
-
-      {/* sorting  */}
 
       <Stack padding={2} marginLeft={-3} >
         <Heading size="md">Sorting by Price:</Heading>
@@ -185,8 +158,6 @@ const FilterComp = () => {
         
     
       </Stack>
-
-
     </Container>
   );
 };

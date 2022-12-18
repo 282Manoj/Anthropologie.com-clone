@@ -6,8 +6,10 @@ import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
-const Home = () => {
+const Signup = () => {
 
     const history = useNavigate();
 
@@ -71,7 +73,7 @@ const Home = () => {
             });
         } else {
             console.log("data added succesfully");
-            history("/login")
+            history("/signin")
             localStorage.setItem("useryoutube",JSON.stringify([...data,inpval]));
 
         }
@@ -80,10 +82,11 @@ const Home = () => {
 
     return (
         <>
+        <Navbar/>
             <div className="container mt-3">
-                <section className='d-flex justify-content-between'>
+                {/* <section className='d-flex justify-content-between'> */}
                     <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-                        <h3 className='text-center col-lg-6'>Sign Up</h3>
+                        <h3 className='text-center col-lg-6' style={{padding:"10px"}}>Sign Up</h3>
                         <Form >
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
 
@@ -110,11 +113,12 @@ const Home = () => {
                         <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
                     </div>
                     <SIgn_img />
-                </section>
+                {/* </section> */}
                 <ToastContainer />
             </div>
+            <Footer/>
         </>
     )
 }
 
-export default Home
+export default Signup;
