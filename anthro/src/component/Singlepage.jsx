@@ -3,7 +3,7 @@ import React from 'react'
 import "./Singlepage.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -84,10 +84,13 @@ if(id){
             <option value="9">9</option>
             <option value="10">10</option>
         </select>
+        <Link to="/cart">
         <div className='button-div'>
 
         <button>ADD  TO  BASKET</button>
+       
         </div>
+        </Link>
       <div className='addto'>
         <p>Add To Registry</p>
         <p>Add to Wish List</p>
