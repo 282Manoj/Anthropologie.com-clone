@@ -3,14 +3,16 @@ import React from 'react'
 import "./Singlepage.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useSelector,useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { addCartItem } from '../Redux/cart/action';
 const Singlepage = () => {
   const {id} =useParams();
+  const dispatch=useDispatch();
   
-  const clothesingleData=useSelector((store)=>store.clotheReducer.cloths );
+const clothesingleData=useSelector((store)=>store.clotheReducer.cloths );
 const shoessingleData=useSelector((store)=>store.shoesReducer.Shoes);
 // console.log(shoessingleData);
  
@@ -87,8 +89,9 @@ if(id){
         <Link to="/cart">
         <div className='button-div'>
 
-        <button>ADD  TO  BASKET</button>
-       
+        <button onClick={()=>dispatch(addCartItem(
+          clotheData || shoesData
+        ))}>ADD  TO  BASKET</button>       
         </div>
         </Link>
       <div className='addto'>

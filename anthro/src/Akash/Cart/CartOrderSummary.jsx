@@ -25,20 +25,25 @@ import { useNavigate } from 'react-router-dom'
       </Flex>
     )
   }
-
- 
-  export const CartOrderSummary = () => {
-    const navigate=useNavigate();
-
+  
+  export const CartOrderSummary = ({cart}) => {
+    const price=cart.reduce((prev,el)=>prev+el.price,0)
+    // console.log(price)
+    const navigate=useNavigate()
     const handleClick=()=>{
       navigate("/address");
     }
+
+ 
+  // export const CartOrderSummary = () => {
+   
+  //   }
     return (
       <Stack spacing="8" borderWidth="1px" rounded="lg" padding="8" width="full">
         <Heading size="md">Order Summary</Heading>
   
         <Stack spacing="6">
-          <OrderSummaryItem label="Subtotal" value={formatPrice(597)} />
+          <OrderSummaryItem label="Subtotal" value={formatPrice(price)} />
           <OrderSummaryItem label="Shipping + Tax">
             <Link href="#" textDecor="underline">
               Calculate shipping
@@ -54,7 +59,7 @@ import { useNavigate } from 'react-router-dom'
               Total
             </Text>
             <Text fontSize="xl" fontWeight="extrabold">
-              {formatPrice(597)}
+              {formatPrice(price)}
             </Text>
           </Flex>
         </Stack>

@@ -23,8 +23,10 @@ function App() {
         <Route path="/address" element={<Address/>}></Route>
         <Route path="/clothe" element={<Clothe />}></Route>
         <Route path="/shoes" element={<Shoes/>}></Route>
+        <Route path="/cart" element={<CartPage/>}></Route>
         <Route path="/clothe/:id" element={<Singlepage />}></Route>
         <Route path="/shoes/:id" element={<Singlepage />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>        
       </Routes>
     </>
   );
