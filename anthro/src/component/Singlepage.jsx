@@ -41,19 +41,19 @@ if(id){
     </div>
     <div className='container'>
       <div className='small-img'>
-        <img src={clotheData.img1 || shoesData.img1}  alt="" />
-        <img src={clotheData.img2 || shoesData.img2} alt="" />
-        <img src={clotheData.img1 || shoesData.img1} alt="" />
-        <img src={clotheData.img2 || shoesData.img2} alt="" />
+        <img src={clotheData.img1 || shoesData.img1}  alt="pic" />
+        <img src={clotheData.img2 || shoesData.img2} alt="pic" />
+        <img src={clotheData.img1 || shoesData.img1} alt="pic" />
+        <img src={clotheData.img2 || shoesData.img2} alt="pic" />
       </div>
       <div className='large-img'>
-        <img src={clotheData.img1 || shoesData.img1}  alt="" />
+        <img src={clotheData.img1 || shoesData.img1}  alt="pic" />
       </div>
       <div className='details'>
         <h2 style={{marginBottom:"10px",marginTop:"0px"}}>Stella Nova Emblellished <br/>One-Shoulder Dress</h2>
         <p style={{marginBottom:"10px",textDecoration:"underline"}}>Stella Nova</p>
         <p style={{marginBottom:"10px",textDecoration:"underline"}}>Write a Review</p>
-        <p style={{marginBottom:"20px"}}>${clotheData.price}</p>
+        <p style={{marginBottom:"20px"}}>${clotheData.price ||shoesData.price} </p>
         <p>Or 4 interest free installments of  $106.25 with</p>
         <p style={{marginBottom:"20px"}}>Klarna. <span>or</span> afterpay</p>
         <hr />

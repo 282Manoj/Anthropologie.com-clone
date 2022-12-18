@@ -96,10 +96,11 @@ function Address() {
             <p>$460.00</p>
           </div>
         </div>
-
+<Link to="/sucess">
         <div className="ord-btn">
           <button>SHIP TO THIS ADDRESS</button>
         </div>
+        </Link>
         <hr className="hr-tag" />
 
         <div className="main-order-summery1">

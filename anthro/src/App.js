@@ -9,6 +9,7 @@ import  {CartPage}  from "./Akash/Cart/CartPage";
 import Clothe from "./Pages/Clothe";
 import Address from "./component/Address";
 import Shoes from "./Pages/Shoes";
+import Sucess from "./component/sucess";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/singlepage" element={<Singlepage />}></Route>
         <Route path="/signin" element={< Login/>}></Route>
         <Route path="/signup" element={< Signup/>}></Route>
+        <Route path="/sucess" element={< Sucess/>}></Route>
         <Route path="/address" element={<Address/>}></Route>
         <Route path="/clothe" element={<Clothe />}></Route>
         <Route path="/shoes" element={<Shoes/>}></Route>
