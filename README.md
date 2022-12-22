@@ -1,4 +1,4 @@
-# Anthropologie.com-clon
+# Anthropologie.com-clone
 clone https://www.anthropologie.com/ Anthropologie is a global mega-brand with free shipping and free returns, gaining popularity all over the world. It is a British online fashion and cosmetic retailer. ASOS' current customers include all sorts of people with a taste for fashion and fashionable clothes.
 
 ## Demo
