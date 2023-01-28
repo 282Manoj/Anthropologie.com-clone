@@ -1,17 +1,17 @@
-import { Grid, GridItem, Heading ,Divider} from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Divider } from "@chakra-ui/react";
 import React from "react";
 import ClotheList from "../component/Clothe/ClotheList";
 import FilterComp from "../component/Clothe/FilterComponets";
 import Head from "../component/Clothe/Head";
 import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
-
+import "./clothe.css";
 
 const Clothe = () => {
   return (
-    <div style={{paddingTop:"25px"}}>
-        <Navbar/>
-        
+    <div >
+      <Navbar />
+
       <Head />
 
       <Grid
@@ -20,34 +20,22 @@ const Clothe = () => {
         templateColumns="repeat(5, 1fr)"
         gap={2}
       >
-        <GridItem rowSpan={2} colSpan={1} marginLeft="35px" >
-          <Heading
-            textAlign={{ base: "start", md: "start", lg: "start" }}
-            fontSize="1xl"
-            paddingBottom="10px"
-            marginLeft="15px"
-            
-          >
-           Browse by:
-           <Divider></Divider>
+        <GridItem rowSpan={2} colSpan={1} marginLeft="35px">
+          <Heading >
+            Browse by:
+            <Divider></Divider>
           </Heading>
 
           <FilterComp />
         </GridItem>
 
-        <GridItem colSpan={4} rowSpan={2} >
-          <Heading
-            textAlign={{ base: "center", md: "center", lg: "center" }}
-            fontSize="2xl"
-            color="#26262C"
-          >
-            Women's Clothing
-          </Heading>
+        <GridItem colSpan={4} rowSpan={2}>
+          <Heading >Women's Clothing</Heading>
 
           <ClotheList />
         </GridItem>
       </Grid>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

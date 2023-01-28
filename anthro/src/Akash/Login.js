@@ -49,10 +49,17 @@ const Login = () => {
                 position: "top-center",
             });
         } else if (!email.includes("@")) {
-            toast.error('plz enter valid email addres', {
+            toast.error(' plz enter valid email missing @ ', {
                 position: "top-center",
             });
-        } else if (password === "") {
+        } 
+        else if(!email.includes(".")){
+            toast.error('plz enter valid email address missing .(DOt)', {
+                position: "top-center",
+            });
+        }
+        
+        else if (password === "") {
             toast.error('password field is requred', {
                 position: "top-center",
             });
@@ -60,7 +67,9 @@ const Login = () => {
             toast.error('password length greater five', {
                 position: "top-center",
             });
-        } else {
+        } 
+        
+        else {
 
             if (getuserArr && getuserArr.length) {
                 const userdata = JSON.parse(getuserArr);
