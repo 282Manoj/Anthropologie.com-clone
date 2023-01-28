@@ -84,6 +84,7 @@ export const CartItem = (props) => {
           aria-label={`Delete ${name} from cart`}
           onClick={() => {
             dispatch(deleteCartItem(id)).then((res) => {
+              console.log(res);
               if (res.type === "DELETE_ITEM_SUCCESS") {
                 dispatch(getCartItem());
               }
@@ -107,11 +108,16 @@ export const CartItem = (props) => {
           fontSize="sm"
           textDecor="underline"
           onClick={() => {
-            dispatch(deleteCartItem(id)).then((res) => {
-              if (res.type === "DELETE_ITEM_SUCCESS") {
-                dispatch(getCartItem());
-              }
-            });
+            dispatch(deleteCartItem(id))
+              .then((res) => {
+                console.log(res);
+                if (res.type === "DELETE_ITEM_SUCCESS") {
+                  dispatch(getCartItem());
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
           }}
         >
           Delete

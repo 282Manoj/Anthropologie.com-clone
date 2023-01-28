@@ -16,21 +16,18 @@ const ClotheCard = ({ clotheData }) => {
   // console.log(bookData);
   return (
     <Grid>
-      <Card maxW="sm" style={{ border: "none" }}>
+      <Card maxW="sm" >
         <CardBody>
           <Image
-            style={{ height: "350px", width: "350px" }}
+            
             src={clotheData.img2}
             alt="Green double couch with wooden legs"
-            //   borderRadius='lg'
+           
           />
           <Stack mt="6" spacing="3">
             <Text>{clotheData.title}</Text>
             <Text
-              color="blue.600"
-              fontSize="medium"
-              textAlign="start"
-              paddingLeft="5px"
+            
             >
               ${clotheData.price}
             </Text>
@@ -38,7 +35,7 @@ const ClotheCard = ({ clotheData }) => {
         </CardBody>
         <Divider />
 
-        <Wrap style={{ padding: "10px" }}>
+        <Wrap >
           <WrapItem>
             <Avatar
               size="xs"

@@ -27,7 +27,6 @@ import {
             <Stack mt="6" spacing="3">
               <Text>{ShoesData.title}</Text>
               <Text
-                color="blue.600"
                 fontSize="medium"
                 textAlign="start"
                 paddingLeft="5px"

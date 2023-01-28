@@ -56,10 +56,15 @@ const Signup = () => {
                 position: "top-center",
             });
         } else if (!email.includes("@")) {
-             toast.error('plz enter valid email addres',{
+             toast.error('plz enter valid email address missing @',{
                 position: "top-center",
             });
-        } else if (date === "") {
+        }
+        else if (!email.includes(".")) {
+            toast.error('plz enter valid email address misssing .(Dot)',{
+               position: "top-center",
+           });
+       } else if (date === "") {
              toast.error('date field is requred',{
                 position: "top-center",
             });

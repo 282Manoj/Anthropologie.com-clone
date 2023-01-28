@@ -7,7 +7,7 @@ export const getCartItem = (payload) => (dispatch) => {
   });
 
   axios
-    .get("http://localhost:8080/cart")
+    .get("https://anthropologyapi.onrender.com/cart")
     .then((res) => {
         // console.log(res.data)
       dispatch({
@@ -29,7 +29,7 @@ export const addCartItem = (payload) => (dispatch) => {
   });
 
   axios
-    .post("http://localhost:8080/cart", payload)
+    .post("https://anthropologyapi.onrender.com/cart", payload)
     .then((res) => {
       dispatch({
         type: types.ADD_TO_CART_SUCCESS,
@@ -49,7 +49,7 @@ export const updateCartItem = (payload) => (dispatch) => {
   });
 
   axios
-    .get("http://localhost:8080/cart")
+    .get("https://anthropologyapi.onrender.com/cart")
     .then((res) => {
       dispatch({
         type: types.QUANTITY_UPDATE_SUCCESS,
@@ -70,7 +70,7 @@ export const deleteCartItem = (payload) => (dispatch) => {
   });
 
   return axios
-    .delete(`http://localhost:8080/cart/${payload}`)
+    .delete(`https://anthropologyapi.onrender.com/cart/${payload}`)
     .then((res) => {
      return dispatch({
         type: types.DELETE_ITEM_SUCCESS,
