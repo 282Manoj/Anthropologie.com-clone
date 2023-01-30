@@ -5,7 +5,8 @@ import { CiUser } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
 import { Link, NavLink, useLocation, useSearchParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getClothes } from "../Redux/clotheproduct/action";
 
 function Navbar() {
   const [active1, setAvtive1] = useState(true);
@@ -14,22 +15,26 @@ function Navbar() {
   const [seachData, setSearchData] = useState("");
   const [click, setClick] = useState(false);
   const clothe = useSelector((store) => store.clotheReducer.cloths);
-  // const dispatch = useDispatch();
-  const location = useLocation();
+  const dispatch = useDispatch();
+  console.log("clothe", clothe);
   // const [searchParams] = useSearchParams();
 
-  const FetchData = () => {
-    useEffect(() => {
-      fetch("https://anthropologyapi-2nd.onrender.com/cloths")
-        .then((res) => res.json())
-        .then((res) => {
-          setFetchData(res);
-        })
-        .catch((err) => console.log(err));
-    }, []);
-  };
+  // const FetchData = () => {
+  //   useEffect(() => {
+  //     fetch("https://anthropologyapi-2nd.onrender.com/cloths")
+  //       .then((res) => res.json())
+  //       .then((res) => {
+  //         setFetchData(res);
+  //       })
+  //       .catch((err) => console.log(err));
+  //   }, []);
+  // };
 
-  FetchData();
+  // FetchData();
+
+  useEffect(() => {
+    dispatch(getClothes(clothe));
+  }, []);
 
   const GetData = (change) => {
     let changes = "";
@@ -41,7 +46,7 @@ function Navbar() {
       }
     }
 
-    const data = fetchData.filter((ele) => ele.title.includes(changes));
+    const data = clothe.filter((ele) => ele.title.includes(changes));
 
     console.log("change", changes);
     setSearchData(data);
