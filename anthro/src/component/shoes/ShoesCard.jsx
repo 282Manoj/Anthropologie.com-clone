@@ -13,7 +13,7 @@ import {
   import React from "react";
   
   const ShoesCard = ({ ShoesData }) => {
-    // console.log(bookData);
+    console.log("ShoesData ",ShoesData );
     return (
       <Grid>
         <Card maxW="sm" style={{ border: "none" }}>

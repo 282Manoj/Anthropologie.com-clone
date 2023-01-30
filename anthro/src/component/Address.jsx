@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Address.css";
 import { BsHandbag } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { BsBoxSeam } from "react-icons/bs";
 import { RiStore2Line } from "react-icons/ri";
 import { TfiGift } from "react-icons/tfi";
+import axios from "axios";
 
 function Address() {
+  let total=0;
   const [state1, setState1] = useState(true);
   const [state2, setState2] = useState(false);
-
+  const [data, setData] = useState("");
   const handleClick1 = () => {
     setState1(true);
     setState2(false);
@@ -20,6 +22,23 @@ function Address() {
     setState2(true);
   };
 
+  useEffect(() => {
+    axios
+      .get("https://anthropologyapi-2nd.onrender.com/cart")
+      .then((response) => {
+     
+        setData(response.data);
+      })
+     
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  console.log(data);
+for(let i=0;i<data.length;i++){
+  total=total+data[i].price
+}
+console.log(total);
   return (
     <>
       <div className="Address-Nav">
@@ -79,7 +98,7 @@ function Address() {
         <div className="Main-Order-Summery">
           <div>
             <p>Subtotal</p>
-            <p>$460.00</p>
+            <p>${total}</p>
           </div>
 
           <div>
@@ -93,13 +112,13 @@ function Address() {
           </div>
           <div>
             <p>Total</p>
-            <p>$460.00</p>
+            <p>${total}</p>
           </div>
         </div>
-<Link to="/sucess">
-        <div className="Ord-Btn">
-          <button>SHIP TO THIS ADDRESS</button>
-        </div>
+        <Link to="/sucess">
+          <div className="Ord-Btn">
+            <button>SHIP TO THIS ADDRESS</button>
+          </div>
         </Link>
         <hr className="Hr-Tag" />
 
