@@ -8,7 +8,7 @@ isError:false,
 
 export const reducer = (state = InitialState,action) => {
     const { type, payload } = action;
-
+console.log("cartpayload",payload)
     switch (type) {
 //ADD
         case types.ADD_TO_CART_REQUEST:

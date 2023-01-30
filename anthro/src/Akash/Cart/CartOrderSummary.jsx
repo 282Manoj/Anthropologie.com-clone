@@ -35,9 +35,7 @@ import { useNavigate } from 'react-router-dom'
     }
 
  
-  // export const CartOrderSummary = () => {
-   
-  //   }
+
     return (
       <Stack spacing="8" borderWidth="1px" rounded="lg" padding="8" width="full">
         <Heading size="md">Order Summary</Heading>

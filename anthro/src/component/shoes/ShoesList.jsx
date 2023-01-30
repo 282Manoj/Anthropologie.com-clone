@@ -39,6 +39,7 @@ const ShoesList = () => {
     <Grid templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }} gap={4} padding={3} >
       {Shoes.length > 0 &&
         Shoes.map((Shoes) => {
+          console.log("shoes",Shoes)
           return (
            <div key={Shoes.id} >
             <Link to={`/shoes/${Shoes.id}`}>

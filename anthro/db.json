@@ -1,5 +1,15 @@
 {
-  "cart": [],
+  "cart": [
+    {
+      "id": 4,
+      "img1": "https://images.urbndata.com/is/image/Anthropologie/4112929840003_004_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+      "img2": "https://images.urbndata.com/is/image/Anthropologie/4112929840003_004_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+      "title": "Favorite Daughter Favorite Aunt Tee",
+      "category": "Joslin",
+      "size": "M",
+      "price": 48
+    }
+  ],
   "cloths": [
     {
       "id": 1,

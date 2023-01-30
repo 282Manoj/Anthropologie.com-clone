@@ -23,7 +23,7 @@ const getClotheError = () => {
 
 const getClothes= (params) =>dispatch=> {
     dispatch(getClotheRequest());
-    return axios.get("https://anthropologyapi.onrender.com/cloths",params)
+    return axios.get("https://anthropologyapi-2nd.onrender.com/cloths",params)
     .then((res)=>{
         dispatch(getClotheSucces(res.data));
 

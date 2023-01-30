@@ -1,15 +1,15 @@
 import * as types from "./actionTypes";
 import axios from "axios";
 
-export const getCartItem = (payload) => (dispatch) => {
+export const getCartItem = () => (dispatch) => {
   dispatch({
     type: types.GET_CART_ITEM_REQUEST,
   });
 
   axios
-    .get("https://anthropologyapi.onrender.com/cart")
+    .get("https://anthropologyapi-2nd.onrender.com/cart")
     .then((res) => {
-        // console.log(res.data)
+        console.log(res.data)
       dispatch({
         type: types.GET_CART_ITEM_SUCCESS,
         payload: res.data,
@@ -23,17 +23,18 @@ export const getCartItem = (payload) => (dispatch) => {
 };
 
 export const addCartItem = (payload) => (dispatch) => {
-  console.log("payload", payload);
+  console.log("cartpayload", payload);
   dispatch({
     type: types.ADD_TO_CART_REQUEST,
   });
 
   axios
-    .post("https://anthropologyapi.onrender.com/cart", payload)
+    .post("https://anthropologyapi-2nd.onrender.com/cart", payload)
     .then((res) => {
       dispatch({
         type: types.ADD_TO_CART_SUCCESS,
         payload: res.data,
+        
       });
     })
     .catch(() => {
@@ -49,7 +50,7 @@ export const updateCartItem = (payload) => (dispatch) => {
   });
 
   axios
-    .get("https://anthropologyapi.onrender.com/cart")
+    .get("https://anthropologyapi-2nd.onrender.com/cart")
     .then((res) => {
       dispatch({
         type: types.QUANTITY_UPDATE_SUCCESS,
@@ -70,7 +71,7 @@ export const deleteCartItem = (payload) => (dispatch) => {
   });
 
   return axios
-    .delete(`https://anthropologyapi.onrender.com/cart/${payload}`)
+    .delete(`https://anthropologyapi-2nd.onrender.com/cart/${payload}`)
     .then((res) => {
      return dispatch({
         type: types.DELETE_ITEM_SUCCESS,
