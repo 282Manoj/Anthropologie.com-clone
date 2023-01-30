@@ -9,7 +9,7 @@ import "./clothe.css";
 
 const Clothe = () => {
   return (
-    <div >
+    <div className="Main_div"  >
       <Navbar />
 
       <Head />
@@ -21,7 +21,7 @@ const Clothe = () => {
         gap={2}
       >
         <GridItem rowSpan={2} colSpan={1} marginLeft="35px">
-          <Heading >
+          <Heading className="Haeding">
             Browse by:
             <Divider></Divider>
           </Heading>
@@ -30,7 +30,7 @@ const Clothe = () => {
         </GridItem>
 
         <GridItem colSpan={4} rowSpan={2}>
-          <Heading >Women's Clothing</Heading>
+          <Heading className="Header_women">Women's Clothing</Heading>
 
           <ClotheList />
         </GridItem>

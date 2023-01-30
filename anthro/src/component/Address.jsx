@@ -22,9 +22,9 @@ function Address() {
 
   return (
     <>
-      <div className="address-nav">
-        <div className="left-address-nav">
-          <div className="left-address-nav-left">
+      <div className="Address-Nav">
+        <div className="Left-Address-Nav">
+          <div className="Left-Address-Nav-Left">
             <Link to="/">
               <img
                 src="https://images.ctfassets.net/5de70he6op10/7q3Z6vJ6UEPFyAPKAFZZxl/1a22eec777828277571187c43306e983/Anthropologie_Holiday_Lockup__1_update.svg"
@@ -32,14 +32,14 @@ function Address() {
               />
             </Link>
           </div>
-          <div className="left-address-nav-right">
+          <div className="Left-Address-Nav-Right">
             <img
               src="https://images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg"
               alt=""
             />
           </div>
         </div>
-        <div className="right-address-nav">
+        <div className="Right-Address-Nav">
           <div>
             <BsHandbag size={30} color="teal" />
           </div>
@@ -48,35 +48,35 @@ function Address() {
 
       <hr />
 
-      <div className="ship-or-pick-up">
-        <div className="ship">
+      <div className="Ship-Or-Pick-Up">
+        <div className="Ship">
           <p>Ship or Pick Up</p>
         </div>
 
-        <div className="slash">
+        <div className="Slash">
           <p>/</p>
         </div>
 
-        <div className="pay">
+        <div className="Pay">
           <p>Payment</p>
         </div>
-        <div className="slash">
+        <div className="Slash">
           <p>/</p>
         </div>
-        <div className="review">
+        <div className="Review">
           <p>Review</p>
         </div>
       </div>
 
       {/* Order summerry */}
 
-      <div className="order-summery">
-        <div className="heading-order">
+      <div className="Order-Summery">
+        <div className="Heading-Order">
           <p>Order Summary</p>
           <p>800.309.2500</p>
         </div>
 
-        <div className="main-order-summery">
+        <div className="Main-Order-Summery">
           <div>
             <p>Subtotal</p>
             <p>$460.00</p>
@@ -97,13 +97,13 @@ function Address() {
           </div>
         </div>
 <Link to="/sucess">
-        <div className="ord-btn">
+        <div className="Ord-Btn">
           <button>SHIP TO THIS ADDRESS</button>
         </div>
         </Link>
-        <hr className="hr-tag" />
+        <hr className="Hr-Tag" />
 
-        <div className="main-order-summery1">
+        <div className="Main-Order-Summery1">
           <div>
             <p>Promo Code</p>
             <p>+</p>
@@ -113,27 +113,27 @@ function Address() {
 
       {/*/////////////////////////  ///////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-      <div className="ship-oder-details">
-        <div className="ship-order">
-          <div className="addres-bar">
-            <div className="address-btn">
+      <div className="Ship-Oder-Details">
+        <div className="Ship-Order">
+          <div className="Addres-Bar">
+            <div className="Address-Btn">
               <div
-                className={`ship-btn ${state1 ? "activeBtn" : ""}`}
+                className={`Ship-Btn ${state1 ? "ActiveBtn" : ""}`}
                 onClick={handleClick1}
               >
                 <button>
                   {" "}
-                  <BsBoxSeam className="box-box-btn" /> <span>&nbsp;</span> Ship
+                  <BsBoxSeam className="Box-Box-Btn" /> <span>&nbsp;</span> Ship
                 </button>
               </div>
 
               <div
-                className={`ship-btn ${state2 ? "activeBtn" : ""}`}
+                className={`Ship-Btn ${state2 ? "ActiveBtn" : ""}`}
                 onClick={handleClick2}
               >
                 <button>
                   {" "}
-                  <RiStore2Line className="box-box-btn" /> <span>&nbsp;</span>{" "}
+                  <RiStore2Line className="Box-Box-Btn" /> <span>&nbsp;</span>{" "}
                   Pick Up
                 </button>
               </div>
@@ -141,14 +141,14 @@ function Address() {
           </div>
 
           {state1 ? (
-            <div className="shoping-user-details">
-              <div className="heading-shop">
+            <div className="Shoping-User-Details">
+              <div className="Heading-Shop">
                 <p>Shipping Address</p>
               </div>
 
               <form>
-                <div className="region-form">
-                  <p className="para-form">Country/Region*</p>
+                <div className="Region-Form">
+                  <p className="Para-Form">Country/Region*</p>
                   <select>
                     <option value="">Inida</option>
                     <option value="">USA</option>
@@ -177,66 +177,66 @@ function Address() {
                   </select>
                 </div>
 
-                <div className="name-form">
-                  <div className="firstlast-name-form">
-                    <p className="para-form">First Name*</p>
-                    <input type="text" className="input-form" />
+                <div className="Name-Form">
+                  <div className="Firstlast-Name-Form">
+                    <p className="Para-Form">First Name*</p>
+                    <input type="text" className="Input-Form" />
                   </div>
 
-                  <div className="firstlast-name-form">
-                    <p className="para-form">Last Name*</p>
-                    <input type="text" className="input-form" />
+                  <div className="Firstlast-Name-Form">
+                    <p className="Para-Form">Last Name*</p>
+                    <input type="text" className="Input-Form" />
                   </div>
                 </div>
 
-                <div className="address-form">
-                  <p className="para-form">Street Address1*</p>
+                <div className="Address-Form">
+                  <p className="Para-Form">Street Address1*</p>
                   <input
                     type="text"
-                    className="input-form"
+                    className="Input-Form"
                     placeholder="35 character limit, continue below."
                   />
                 </div>
 
-                <div className="address-form">
-                  <p className="para-form">Address 2</p>
+                <div className="Address-Form">
+                  <p className="Para-Form">Address 2</p>
                   <input
                     type="text"
-                    className="input-form"
+                    className="Input-Form"
                     placeholder="35 character limit, continue below."
                   />
                 </div>
 
-                <div className="check-box-form">
+                <div className="Check-Box-Form">
                   <input type="checkbox" name="" id="" />
-                  <p className="para-form">PO Box</p>
+                  <p className="Para-Form">PO Box</p>
                 </div>
 
-                <div className="city-region">
-                  <div className="cityregion-form">
-                    <p className="para-form">City*</p>
-                    <input type="text" className="input-form" />
+                <div className="City-Region">
+                  <div className="Cityregion-Form">
+                    <p className="Para-Form">City*</p>
+                    <input type="text" className="Input-Form" />
                   </div>
 
-                  <div className="cityregion-form">
-                    <p className="para-form">City*</p>
-                    <input type="text" className="input-form" />
-                  </div>
-                </div>
-
-                <div className="post-code">
-                  <div className="postcode-form">
-                    <p className="para-form">Postcode*</p>
-                    <input type="text" className="input-form" />
+                  <div className="Cityregion-Form">
+                    <p className="Para-Form">City*</p>
+                    <input type="text" className="Input-Form" />
                   </div>
                 </div>
 
-                <div className="mobile-code">
-                  <div className="mobile-form">
-                    <p className="para-form">Mobile Number*</p>
+                <div className="Post-Code">
+                  <div className="Postcode-Form">
+                    <p className="Para-Form">Postcode*</p>
+                    <input type="text" className="Input-Form" />
+                  </div>
+                </div>
+
+                <div className="Mobile-Code">
+                  <div className="Mobile-Form">
+                    <p className="Para-Form">Mobile Number*</p>
                     <input
                       type="number"
-                      className="input-form"
+                      className="Input-Form"
                       placeholder="+91"
                     />
                   </div>
@@ -244,8 +244,8 @@ function Address() {
               </form>
             </div>
           ) : (
-            <div className="shoping-user-details-pick">
-              <div className="para-tag">
+            <div className="Shoping-User-Details-Pick">
+              <div className="Para-Tag">
                 <p>Find a Pickup Location</p>
                 <p>Locate a store or a Collection Point near you:</p>
                 <p>
@@ -255,7 +255,7 @@ function Address() {
                   Collection Point orders.
                 </p>
 
-                <div className="input-tag-pick-up">
+                <div className="Input-Tag-Pick-Up">
                   <div>
                     <p id="para-pick-up">City or ZIP Code*</p>
                     <input type="text" id="inp-pick-up1" />
@@ -285,9 +285,9 @@ function Address() {
       </div>
 
       {/* /////////////////////////////////////////////////////////////////// */}
-      <div className="footer-address">
-        <div className="top-address">
-          <div className="one">
+      <div className="Footer-Address">
+        <div className="Top-Address">
+          <div className="One">
             <ul>
               <li>Store Locator</li>
               <li>Shipping Information</li>
@@ -295,7 +295,7 @@ function Address() {
               <li>Customer Service</li>
             </ul>
           </div>
-          <div className="two">
+          <div className="Two">
             <p>
               Questions?<span> Contact Us</span>
             </p>
