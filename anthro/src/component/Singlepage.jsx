@@ -13,11 +13,12 @@ const Singlepage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
+  console.log(id);
+
   const clothesingleData = useSelector((store) => store.clotheReducer.cloths);
   const shoessingleData = useSelector((store) => store.shoesReducer.Shoes);
-console.log("shoessingleData",shoessingleData);
 
-console.log("clothesingleData",clothesingleData);
+  // console.log("clothesingleData", clothesingleData);
   const [clotheData, setClotheData] = useState({});
   const [shoesData, setShoesData] = useState({});
 
@@ -34,9 +35,8 @@ console.log("clothesingleData",clothesingleData);
     }
   }, [id, clothesingleData, shoessingleData]);
 
- 
-  console.log("shoesData",shoesData)
-  console.log("clotheData",clotheData)
+  // console.log("shoesData", shoesData);
+  // console.log("clotheData", clotheData);
 
   // const add =()=>{
 
@@ -54,7 +54,7 @@ console.log("clothesingleData",clothesingleData);
   //         clotheData
   //               ));
   //     }
-  
+
   //   }
   // }
   return (
@@ -148,11 +148,16 @@ console.log("clothesingleData",clothesingleData);
               {/* <Button onClick={add}>
               ADD TO BASKET
               </Button> */}
-              <button onClick={() => dispatch(addCartItem(
-                // shoesData || 
-                clotheData
-
-               ) )}>
+              <button
+                onClick={() =>
+                  dispatch(
+                    addCartItem(
+                      // shoesData ||
+                      clotheData
+                    )
+                  )
+                }
+              >
                 ADD TO BASKET
               </button>
             </div>
@@ -171,9 +176,7 @@ console.log("clothesingleData",clothesingleData);
         </div>
       </div>
 
-     
       <Footer />
-      
     </>
   );
 };
