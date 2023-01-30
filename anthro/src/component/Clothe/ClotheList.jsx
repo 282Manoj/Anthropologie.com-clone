@@ -7,7 +7,7 @@ import { getClothes } from "../../Redux/clotheproduct/action";
 import ClotheCard from "./ClotheCard";
 const ClotheList = () => {
   const clothe = useSelector((store) => store.clotheReducer.cloths);
-  // console.log(clothe);
+  console.log("clothe From deepak", clothe);
   const dispatch = useDispatch();
   const location = useLocation();
   const [searchParams] = useSearchParams();

@@ -8,7 +8,7 @@ import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { addCartItem } from "../Redux/cart/action";
-import { Button } from "@chakra-ui/react";
+
 const Singlepage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Singlepage = () => {
   const clothesingleData = useSelector((store) => store.clotheReducer.cloths);
   const shoessingleData = useSelector((store) => store.shoesReducer.Shoes);
 
-  // console.log("clothesingleData", clothesingleData);
+  console.log("clothesingleData", clothesingleData);
   const [clotheData, setClotheData] = useState({});
   const [shoesData, setShoesData] = useState({});
 
@@ -67,18 +67,23 @@ const Singlepage = () => {
           <img src={clotheData.img1 || shoesData.img1} alt="pic" />
           <img src={clotheData.img2 || shoesData.img2} alt="pic" />
           <img src={clotheData.img1 || shoesData.img1} alt="pic" />
-          <img src={clotheData.img2 || shoesData.img2} alt="pic" />
         </div>
         <div className="large-img">
           <img src={clotheData.img1 || shoesData.img1} alt="pic" />
         </div>
         <div className="details">
-          <h2 style={{ marginBottom: "10px", marginTop: "0px" }}>
-            Stella Nova Emblellished <br />
-            One-Shoulder Dress
+          <h2
+            style={{
+              marginBottom: "10px",
+              marginTop: "0px",
+              fontSize: "30px",
+              fontWeight: "bold",
+            }}
+          >
+            {clotheData.title}
           </h2>
           <p style={{ marginBottom: "10px", textDecoration: "underline" }}>
-            Stella Nova
+            {clotheData.category}
           </p>
           <p style={{ marginBottom: "10px", textDecoration: "underline" }}>
             Write a Review
@@ -86,10 +91,10 @@ const Singlepage = () => {
           <p style={{ marginBottom: "20px" }}>
             ${clotheData.price || shoesData.price}{" "}
           </p>
-          <p>Or 4 interest free installments of $106.25 with</p>
+          {/* <p>Or 4 interest free installments of $106.25 with</p>
           <p style={{ marginBottom: "20px" }}>
             Klarna. <span>or</span> afterpay
-          </p>
+          </p> */}
           <hr />
           <div className="color-div">
             <p>
@@ -130,7 +135,7 @@ const Singlepage = () => {
           >
             Size Guide
           </p>
-          <p style={{ marginBottom: "5px", fontSize: "20px" }}>Qty*</p>
+          {/* <p style={{ marginBottom: "5px", fontSize: "20px" }}>Qty*</p>
           <select name="" id="">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -142,7 +147,7 @@ const Singlepage = () => {
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
-          </select>
+          </select> */}
           <Link to="/cart">
             <div className="button-div">
               {/* <Button onClick={add}>
@@ -166,13 +171,6 @@ const Singlepage = () => {
             <p>Add To Registry</p>
             <p>Add to Wish List</p>
           </div>
-        </div>
-        <div className="like">
-          <h3>You May Also Like</h3>
-          <img src={clotheData.img1 || shoesData.img1} alt="pic" />
-          <img src={clotheData.img2 || shoesData.img2} alt="pic" />
-          <img src={clotheData.img1 || shoesData.img1} alt="pic" />
-          <img src={clotheData.img2 || shoesData.img2} alt="pic" />
         </div>
       </div>
 

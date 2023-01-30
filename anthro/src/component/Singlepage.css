@@ -18,7 +18,7 @@
     color:rgb(70, 64, 64);
 }
 .large-img>img{
-    width: 500px;
+    width: 650px;
     height: 550px;
     /* border:1px solid black; */
 }
@@ -30,8 +30,8 @@
 
 }
 .small-img>img{
-    width:140px;
-    height: 200px;
+    width:270px;
+    height: 180px;
 }
 .details{
     /* border:1px solid red; */
