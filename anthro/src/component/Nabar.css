@@ -10,6 +10,20 @@
   /* border: 1px solid red; */
 }
 
+.X-y-z {
+  color: teal;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.A-b-c {
+  font-size: 13px;
+  color: teal;
+  border: 1px solid teal;
+  width: 67px;
+  margin-right: 20px;
+}
+
 .top-navbar {
   width: 100%;
   height: 50px;

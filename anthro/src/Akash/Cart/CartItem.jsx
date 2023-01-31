@@ -1,22 +1,16 @@
-import {
-  CloseButton,
-  Flex,
-  Link,
-  Select,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { CloseButton, Flex, Link } from "@chakra-ui/react";
 import * as React from "react";
 import { PriceTag } from "./PriceTag";
 import { CartProductMeta } from "./CartProductMeta";
 import { useDispatch } from "react-redux";
 import { deleteCartItem, getCartItem } from "../../Redux/cart/action";
 import { useEffect } from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 const QuantitySelect = (props) => {
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
 
-  console.log(quantity);
+  // console.log(quantity);
   return (
     // <Select
     //   maxW="64px"
@@ -38,7 +32,8 @@ export const CartItem = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCartItem());
+    let data = dispatch(getCartItem());
+    console.log("data", data);
   }, []);
 
   const {

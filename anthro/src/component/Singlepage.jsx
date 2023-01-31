@@ -8,10 +8,12 @@ import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { addCartItem } from "../Redux/cart/action";
+import { useToast } from "@chakra-ui/react";
 
 const Singlepage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const toast = useToast();
 
   console.log(id);
 
@@ -35,6 +37,21 @@ const Singlepage = () => {
     }
   }, [id, clothesingleData, shoessingleData]);
 
+  const handleOnClock = () => {
+    dispatch(
+      addCartItem(
+        // shoesData ||
+        clotheData
+      )
+    );
+
+    toast({
+      title: `Added to the cart`,
+      position: "top",
+      status: "success",
+      isClosable: true,
+    });
+  };
   // console.log("shoesData", shoesData);
   // console.log("clotheData", clotheData);
 
@@ -154,14 +171,15 @@ const Singlepage = () => {
               ADD TO BASKET
               </Button> */}
               <button
-                onClick={() =>
-                  dispatch(
-                    addCartItem(
-                      // shoesData ||
-                      clotheData
-                    )
-                  )
-                }
+                // onClick={() =>
+                //   dispatch(
+                //     addCartItem(
+                //       // shoesData ||
+                //       clotheData
+                //     )
+                //   )
+                // }
+                onClick={handleOnClock}
               >
                 ADD TO BASKET
               </button>
