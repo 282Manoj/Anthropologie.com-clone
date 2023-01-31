@@ -60,7 +60,10 @@ console.log(total);
         </div>
         <div className="Right-Address-Nav">
           <div>
+            <Link to="/cart">
+            
             <BsHandbag size={30} color="teal" />
+            </Link>
           </div>
         </div>
       </div>

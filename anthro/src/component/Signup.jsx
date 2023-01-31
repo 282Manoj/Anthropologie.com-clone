@@ -63,7 +63,7 @@ const Signup = () => {
     } else {
       axios({
         method: "post",
-        url: " http://localhost:8080/users",
+        url: "https://anthropologyapi-2nd.onrender.com/user",
         data: user,
       })
         .then((res) => {
