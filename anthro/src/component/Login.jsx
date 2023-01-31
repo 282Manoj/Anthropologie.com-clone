@@ -28,7 +28,7 @@ const Login = () => {
   console.log(user);
 
   useEffect(() => {
-    fetch("http://localhost:8080/users")
+    fetch("https://anthropologyapi-2nd.onrender.com/user")
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

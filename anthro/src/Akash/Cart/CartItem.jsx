@@ -68,7 +68,7 @@ export const CartItem = (props) => {
       {/* Desktop */}
       <Flex
         width="full"
-        justify="space-between"
+        justify="space-around"
         display={{
           base: "none",
           md: "flex",
