@@ -3,7 +3,7 @@ clone https://www.anthropologie.com/ Anthropologie is a global mega-brand with f
 
 ## Demo
 
-https://fluffy-biscochitos-c7d59f.netlify.app
+https://cheery-basbousa-652da1.netlify.app/
 
 
 ## Features
