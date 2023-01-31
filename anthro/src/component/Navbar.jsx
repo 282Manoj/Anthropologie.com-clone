@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Nabar.css";
 import { SlGlobeAlt } from "react-icons/sl";
 import { CiUser } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
-import { Link, NavLink, useLocation, useSearchParams } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getClothes } from "../Redux/clotheproduct/action";
+import { AuthContext } from "./AuthContext";
+import { useToast } from "@chakra-ui/react";
 
 function Navbar() {
   const [active1, setAvtive1] = useState(true);
@@ -16,21 +18,12 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const clothe = useSelector((store) => store.clotheReducer.cloths);
   const dispatch = useDispatch();
-  console.log("clothe", clothe);
-  // const [searchParams] = useSearchParams();
+  const { userDetails, setUserDetails, setLogIn, logIn } =
+    useContext(AuthContext);
+  const naviagte = useNavigate();
+  const toast = useToast();
 
-  // const FetchData = () => {
-  //   useEffect(() => {
-  //     fetch("https://anthropologyapi-2nd.onrender.com/cloths")
-  //       .then((res) => res.json())
-  //       .then((res) => {
-  //         setFetchData(res);
-  //       })
-  //       .catch((err) => console.log(err));
-  //   }, []);
-  // };
-
-  // FetchData();
+  console.log(logIn);
 
   useEffect(() => {
     dispatch(getClothes(clothe));
@@ -48,9 +41,9 @@ function Navbar() {
 
     const data = clothe.filter((ele) => ele.title.includes(changes));
 
-    console.log("change", changes);
+    // console.log("change", changes);
     setSearchData(data);
-    console.log("Data", seachData);
+    // console.log("Data", seachData);
   };
 
   const HandleChange = (e) => {
@@ -71,6 +64,17 @@ function Navbar() {
     setClick(!click);
   };
 
+  const setLogout = () => {
+    naviagte("/login");
+    toast({
+      title: `Logout successful`,
+      position: "top",
+      status: "success",
+      isClosable: true,
+    });
+    setLogIn(false);
+  };
+
   return (
     <>
       <div className="nav-bar-main">
@@ -85,14 +89,23 @@ function Navbar() {
             <div className="user-navbar">
               <CiUser fontSize={22} color="teal" />
 
-              <div className="text-navbar">
-                <Link to="/signin" style={{ textDecoration: "none" }}>
-                  Sign In{" "}
-                </Link>{" "}
-                <Link to="/signup" style={{ textDecoration: "none" }}>
-                  / Sign Up
-                </Link>
-              </div>
+              {!logIn ? (
+                <div className="text-navbar">
+                  <Link to="/login" style={{ textDecoration: "none" }}>
+                    Log In{" "}
+                  </Link>{" "}
+                  <Link to="/signup" style={{ textDecoration: "none" }}>
+                    / Sign Up
+                  </Link>
+                </div>
+              ) : (
+                <>
+                  <p className="X-y-z">{userDetails}</p>
+                  <button className="A-b-c" onClick={setLogout}>
+                    Log Out
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>

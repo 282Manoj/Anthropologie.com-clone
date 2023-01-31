@@ -10,6 +10,54 @@
       "price": 48
     }
   ],
+  "users": [
+    {
+      "username": "sudev_kumar",
+      "email": "sudev82@gmail.com",
+      "mobile_no": "131",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "username": "deepak",
+      "email": "deepak@gmail.com",
+      "mobile_no": "1234567890",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "username": "ssss",
+      "email": "ddd",
+      "mobile_no": "12331",
+      "role": "user",
+      "password": "12313",
+      "id": 3
+    },
+    {
+      "username": "sudev",
+      "email": "12das",
+      "mobile_no": "123",
+      "role": "user",
+      "password": "132",
+      "id": 4
+    },
+    {
+      "username": "sudev",
+      "email": "sdf@.",
+      "mobile_no": "13131",
+      "role": "user",
+      "password": "1311212321",
+      "id": 5
+    },
+    {
+      "username": "deepeak bhai",
+      "email": "deepak@g.com",
+      "mobile_no": "8328847712",
+      "role": "user",
+      "password": "deepeak bhai",
+      "id": 6
+    }
+  ],
   "cloths": [
     {
       "id": 1,
